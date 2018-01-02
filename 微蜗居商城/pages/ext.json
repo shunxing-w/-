@@ -1,0 +1,9 @@
+{
+  "extEnable": true,
+  "extAppid": "wx4d3059b167d6a18a",
+  "ext": {
+    "name": "wechat",
+    "version": "1.0.6",
+    "appid": "wx4d3059b167d6a18a"
+  }
+}

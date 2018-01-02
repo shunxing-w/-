@@ -1,0 +1,38 @@
+<!--pages/logistics/index.wxml-->
+<view class="classname">
+  <view class="shop">
+    <view class="shopImg">
+       <image src="../images/kd.png"></image> 
+    </view>
+    <view class="shopText">
+        <view class="state">{{info.status}}</view>
+        <!-- <view class="shop_name">张飞_什锦牛肉500g-四川成都特产牛肉干零食大礼包五香香辣味</view> -->
+        <view class="kd">{{info.exp_text_name}}：{{info.mail_no}}</view>
+    </view>
+  </view>
+     <view class="border"></view>
+  <view class="times">
+    <view class="ul">
+      <view wx:for="{{kt_data}}" class="li"><b></b><span>{{item.time}}</span>
+        <view>{{item.context}}</view>
+      </view>
+   
+      <!-- <view class="li"><b></b><span>2011-01-01</span>
+        <view>商家已发货</view>
+      </view>
+      <view class="li"><b></b><span>2012-01-01</span>
+        <view>快件已从杭州市发出</view>
+      </view>
+      <view class="li"><b></b><span>2013-01-01</span>
+        <view>快件已到杭州运转中心</view>
+      </view>
+      <view class="li"><b></b><span>2014-01-01</span>
+        <view>快件员已派件</view>
+      </view> -->
+    </view>
+  </view>
+  <view class="btn" catchtap="return_order">
+  返回订单详情
+  </view>
+
+</view>

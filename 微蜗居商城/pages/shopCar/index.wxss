@@ -1,0 +1,201 @@
+/* pages/shopCar/index.wxss */
+.main{
+    width: 750rpx;
+    height: 100%;
+}
+page{
+  font-family:  "Microsoft YaHei", Verdana, Arial, sans-serif, "Times New Roman", 宋体;
+}
+.tab{
+    overflow: hidden;
+    position:fixed;
+    background-color:#fff;
+}
+.tab text{
+    text-align: center;
+    line-height: 85rpx;
+    display: block;
+    width: 150rpx;
+    height: 85rpx;
+    font-size: 14px;
+    float: left;
+}
+.liboder {
+    border-bottom: 2px solid #ffaf04;
+    color: #ff690a;
+}
+.Shopping{
+  color: #ff6633;
+  text-align: center;
+  border: 1px solid #ff6633;
+  width: 100px;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+.order_list{
+    overflow:hidden; 
+    padding: 0 10rpx;
+   border-bottom:1rpx solid #d3d3d3;
+  margin-bottom:49px;
+}
+.radio{
+  float: left;
+  padding-top: 50rpx;
+  padding-right: 15rpx;
+}
+.order_cen{
+    overflow: hidden;
+    float: left;
+}
+.order_shop{
+    float: left;
+    width: 150rpx;
+    height: 150rpx;
+    margin-right: 20rpx;
+}
+.order_text{
+    line-height:24px;
+    float: left;
+   color: #a8a8a8;
+   width:215px;
+}
+.order_shopname{
+        display: block;
+    font-size: 14px;
+    overflow: hidden;
+ color: #000;
+ word-break: break-all;
+}
+.order_time{
+    display: block;
+    width:450rpx;
+    font-size: 12px;
+    
+}
+.shopcar_bot{
+  position: fixed;
+  bottom: 0;
+   width:100%; 
+ background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.shopcar_bot .shop_total{
+  margin-top: 10rpx;
+float: right;
+line-height: 40rpx;
+font-size: 14px;
+}
+.select{
+  width: 250rpx;
+  font-size: 14px;
+  margin-top: 24rpx;
+  line-height:40rpx;
+  margin-left: 15rpx;
+  display: block;
+  float: left;
+  overflow: hidden;
+}
+.select icon{
+  float: left;
+}
+.select_text{
+  display: block;
+  float: left;
+  margin-top: 10rpx;
+  margin-left: 15rpx;
+}
+.total{
+  color: #ff6633;
+}
+.freight{
+  color: #ccc;
+}
+.settlement{
+  float: right;
+  line-height: 100rpx;
+  width: 30%;
+  text-align: center;
+  background-color: #ff6633;
+  color: #fff;
+}
+.shopcar_bot text{
+  color: #ff6633;
+  padding-right: 10px;
+}
+.shoppric{
+    color: #ff6633;
+    width: 120rpx;
+    font-size: 14px;
+}
+.wsx_cs{
+  float: left; 
+}
+.order_in{
+  overflow: hidden;
+  padding: 5px 5px;
+   background-color: #fafafa;
+   margin-bottom: 20rpx;
+}
+.jia,.jian{
+  background-color: #ececec;
+  padding: 0 28rpx;
+  line-height:60rpx;
+}
+.add_subt .num{
+    width: 40rpx;
+     line-height:60rpx;
+    text-align: center;
+}
+.goods_prc{
+    font-size: 14px;
+    color:#000;
+
+}
+.goods_price{
+  margin-top: 50rpx;
+  font-size: 14px;
+  color: #ff6633;
+}
+.goods_num{
+  float: right;
+}
+.delete{
+  float: right;
+  background-color: #FF6633;
+  color: #fff;
+  font-size: 14px;
+  padding:  0 30rpx;
+  line-height: 160rpx;
+}
+.operation{
+  float: right;
+  width: 64%;
+  overflow: hidden;
+}
+.add_subt{
+ display: flex;
+ justify-content: space-around;
+}
+.order_top{
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 40px;
+}
+.order_top .shop_nmae{
+  float: left;
+
+}
+.order_top .order_staus{
+  float: right;
+    color: #ff6633;
+    padding-right: 10px;
+}
+.no_order{
+  text-align:center;
+  font-size:12pt;
+  line-height:400rpx;
+}
+.cs{
+  background-color: #efeff4;
+  color: #7d7c7c;
+}

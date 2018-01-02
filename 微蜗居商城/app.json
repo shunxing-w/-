@@ -1,0 +1,53 @@
+{
+  "pages":[
+      "pages/index/index",
+      "pages/Comdetails/index",
+    "pages/address/address",
+    "pages/addressEdit/addressEdit",
+"pages/addressList/index",
+    "pages/Order/order",
+    
+   
+    "pages/orderDetails/index",
+    "pages/logistics/index",
+    "pages/orderList/index",
+    "pages/shopCar/index",
+    "pages/myInfo/index"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"black",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "borderStyle": "#ededed",
+    "selectedColor": "#e8554d",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/home1.png",
+        "selectedIconPath":"pages/images/home.png"
+      },
+      {
+        "pagePath": "pages/shopCar/index",
+        "iconPath": "pages/images/shopcar.png",
+        "selectedIconPath": "pages/images/shopcar1.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/myInfo/index",
+        "iconPath": "pages/images/my1.png",
+        "selectedIconPath": "pages/images/my.png",
+        "text": "我的"
+      }
+      
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

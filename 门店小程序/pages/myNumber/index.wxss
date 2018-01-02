@@ -1,0 +1,88 @@
+/* pages/myNumber/index.wxss */
+page{
+  background-color: rgb(242, 239, 245);
+   
+}
+.box{
+  background-color: #fff;
+margin: 20rpx;
+}
+.order{
+  overflow: hidden;
+   padding: 0 20rpx;
+}
+.shop{
+  float: left;
+}
+.bor{
+  /* width: 100%; */
+  clear: both;
+ border-bottom: 1px dashed #ccc;
+}
+.order view{
+    padding: 20rpx 20rpx;
+   
+}
+
+.shop text{
+    line-height: 80rpx;
+    
+  display: block;
+}
+.shop_name{
+  font-size: 18px;
+
+}
+.time{
+  font-size: 12px;
+  color: #ccc;
+}
+.state{
+  float: right;
+  line-height: 60rpx;
+  font-size: 30px;
+  color: #ff6633;
+  text-align: center;
+}
+.state text{
+  display: block;
+}
+.table{
+  display: flex;
+  flex-direction: row;
+   justify-content:space-between;
+  padding: 10rpx 20rpx;
+}
+.table_time{
+  font-size: 13px;
+  line-height: 60rpx;
+}
+.hxdd{
+  margin-right: 10rpx;
+ color: #ccc;
+
+}
+.ygdd{
+    margin-right: 10rpx;
+  color: #ccc;
+}
+.tableNum{
+  padding: 10rpx 20rpx;
+}
+.tableNum text{
+  display: block;
+}
+.tabnum{
+  font-size: 14px;
+  border: 1px solid #3385ff;
+  color: #3385ff;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+.ys{
+  color: #ff6633;
+}
+.tablx{
+  color: #acacac;
+  font-size: 13px;
+}

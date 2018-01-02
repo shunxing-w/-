@@ -1,0 +1,117 @@
+.masking {
+}
+
+.addres_list {
+  font-size: 14px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.add_title {
+  padding: 0 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  background-color:#fff;
+  font-size: 12pt;
+}
+.esc{
+  width:50rpx;
+  height:50rpx;
+  float:right;
+  margin-top:14rpx;
+}
+.add_title text {
+  float: left;
+}
+
+.xq_list {
+  padding-right:0;
+  padding: 10rpx 20rpx;
+  overflow: hidden;
+  border-bottom: 1px solid #d3d3d3;
+  background-color:#fff;
+}
+
+.add_box {
+  /* height: 550rpx; */
+  overflow: auto;
+  padding-bottom: 90rpx;
+}
+
+.add_lb {
+  line-height: 50rpx;
+  padding:20rpx 0;
+}
+.add_dh{
+  float: right;
+}
+.icon_text{
+  float: left;
+  margin-top:36rpx;
+  margin-left: 15rpx;
+}
+.add_bj {
+  float: right;
+  width: 126rpx;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/bj1.png) no-repeat;
+  height: 56rpx;
+  background-size: 40%;
+  margin-top: 20rpx;
+margin-right:28rpx;
+line-height:56rpx;
+text-align:right;
+font-size:14px;
+overflow: hidden;
+}
+
+.add_clear {
+  float: right;
+  width: 126rpx;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/sc2.png) no-repeat;
+  height: 56rpx;
+  background-size: 40%;
+  margin-top: 20rpx;
+ margin-right:10rpx;
+line-height:56rpx;
+text-align:right;
+
+}
+
+.add_lb .add_name {
+  margin-right: 200rpx;
+}
+.use{
+  overflow: hidden;
+  float:left;
+
+}
+.ico{
+width:40rpx;
+height:40rpx;
+border-radius:50%;
+border:1px solid #d3d3d3;
+float:left;
+margin-top:32rpx;
+
+}
+.state {
+  float: left;
+  line-height:40rpx;
+}
+
+.fl {
+  float: left;
+}
+
+.added {
+  width: 100%;
+  text-align: center;
+  line-height: 90rpx;
+  height: 90rpx;
+  color: #fff;
+  background-color: #f63;
+  position: fixed;
+  bottom: 0;
+}

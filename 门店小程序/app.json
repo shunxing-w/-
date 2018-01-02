@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/getNumber/index",
+    "pages/myNumber/index",
+   "pages/payment/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff6633",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"#fff"
+  }
+}

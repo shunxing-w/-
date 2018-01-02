@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top_img">
+    <image src="../images/qwe.png"></image>
+  </view>
+  
+
+  <view class="">
+    <view class="title">
+      <view class="classname">排队类型</view>
+      <view class="classname">等待位数</view>
+      <!-- <view class="classname">预估等待</view> -->
+    </view>
+    <view class="conter" wx:for="{{tablelist}}">
+      <view class="shop_tab">
+        <text>{{item.queue_no}}</text> 
+        <text class="pr_num">{{item.queue_type}}</text>
+      </view>
+      <view class="classname"> <text class="num">{{item.num}}</text>位</view>
+      <!-- <view class="classname">--分钟</view> -->
+    </view>
+  </view>
+  <view class="operation">
+    <!-- <view class="classname">
+    </view> -->
+    <view class="classname">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="take_no" catchtap="get_tabid">
+          立即取号
+        </view>
+      </picker>
+      <!-- <button class="take_no">立即取号</button>  -->
+    </view>
+  </view>
+  <view class="mask" hidden="{{sta}}" catchtap="colse">
+  <form bindsubmit="formSubmit" report-submit="true">
+
+    <view class="tableid">
+    <text class="tab_title">选择队列</text>
+      <view class="table">
+        <view  wx:for="{{table}}" catchtap="xz_table" data-id="{{item.queue_no}}" class="{{queue_no == item.queue_no ? 'borys' : ''}}">{{item.queue_type}}</view>
+      </view>
+      <!-- <view  catchtap="set_table">确定</view> -->
+      <button type="primary"  class="btn" formType="submit">确定</button>
+    </view>
+
+  </form>
+  </view>
+  <view class="shop_info">
+    <view class="classname">{{shop.shop_name}}</view>
+    <view class="classname">{{shop.address}}</view>
+    <view class="classname">{{shop.tel}}</view>
+    <view class="classname">营业时间:{{shop.worktime}}</view>
+  </view>
+
+</view>

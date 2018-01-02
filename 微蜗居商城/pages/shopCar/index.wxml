@@ -1,0 +1,59 @@
+<view class="main">
+  <view>
+    <!--全部订单-->
+    <block wx:if="{{shop!=''}}" id="whole" class="order">
+      <view  class="order_list">
+        <view class="order_top">
+          <view class="shop_nmae">店铺：{{shop_info.company_name}}</view>
+          <view class="order_staus" catchtap="edit">编辑</view>
+        </view>
+        <view class="order_in" wx:for="{{shop}}"  wx:key="{{item.id}}"  >
+          <view class="radio" data-id="{{item.id}}" data-styleid="{{item.style.style_id}}" catchtap="selectDish">
+         	<view class="add-btn"><icon type="{{item.status ? 'success' : 'circle'}}" color="#ff6633" size="25"></icon></view>
+          </view>
+          <view class="order_cen">
+            <image src="{{item.img}}" class="order_shop" />
+            <view class="order_text" wx:if="{{edit==false}}">
+              <text class="order_shopname">{{item.name}}</text>
+              <text class="order_time">{{item.style.name}}</text>
+              <view class="goods_prc">
+                <text class="shoppric">￥{{item.price}}</text>
+                <text class="goods_num">X{{item.num}}</text>
+              </view>
+            </view>
+            
+          </view>
+          <view class="operation" wx:if="{{edit==true}}">
+              <view class="wsx_cs">
+                <view class="add_subt">
+                  <view class="jia" catchtap="reduce_goods" data-id="{{item.id}}" data-style="{{item.style.style_id}}">-</view>
+                  <view class="num">{{item.num}}</view>
+                  <view class="jian" catchtap="add_goods" data-id="{{item.id}}" data-style="{{item.style.style_id}}">+</view>
+                </view>
+                <view class="goods_price">￥{{item.price}}</view>
+              </view>
+              <view class="delete" catchtap="goods_del" data-id="{{item.id}}" data-styleid="{{item.style.style_id}}" >删除</view>
+            </view>
+        </view>
+
+      </view>
+      <view class="shopcar_bot">
+        <!-- <label class="select"> <radio value="value" /> 全选</label> -->
+        <view class="select" catchtap="select"><icon type="{{select ? 'success' : 'circle'}}" color="#ff6633" size="25"></icon><text class="select_text">全选</text></view>
+        <view class="settlement {{total > 0 ? 'ys' : 'cs'}}" catchtap="Settlement" >结算</view>
+        <view class="shop_total">
+          <view class="total">合计： <text> ￥{{total}}</text></view>
+          <view class="freight">不含运费</view>
+        </view>
+
+      </view>
+    </block>
+
+    <block wx:else>
+      <view class="no_order">购物车空空如也 </view>
+      <view class="Shopping" catchtap="Shopping">去逛逛</view>
+    </block>
+  </view>
+
+</view>
+<loading hidden="{{hidden}}"></loading>

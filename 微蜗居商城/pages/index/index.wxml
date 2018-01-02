@@ -1,0 +1,76 @@
+<!--index.wxml-->
+<view class="container">
+<view class="la"></view>
+  <scroll-view scroll-x="false" style="height: {{ windowHeight+'px'}}" scroll-y="true" bindscrolltolower="lower">
+     <view  catchtap="shopDeta" class="goods" wx:for="{{shop}}" data-index="{{index}}" wx:if="{{index<=3}}" data-shop="{{item}}" data-id='{{item.id}}'>
+      <image class="shopImg" src="{{oss}}{{item.major_pic_url}}" background-size="cover"></image>
+      <view class="goods_info">
+        <view class="goods_name">{{item.name}}/{{item.unit_name}}</view>
+        <view class="goods_price"><text>￥{{item.price}}</text></view>
+      </view>
+      <view class="buy" catchtap="purchase" data-id="{{item.id}}" >
+      <!-- <image  src="../images/buy.png"></image> -->
+      </view>
+    </view> 
+
+   <view   class="box" >
+      <view class="fl"  catchtap="shopDeta" wx:for="{{shop}}" data-shop="{{item}}" data-index="{{index}}" wx:if="{{index>3}}" data-id='{{item.id}}'>
+        <image class="min_img" src="{{oss}}{{item.pic_url}}" background-size="cover"></image>
+        <view class="sp_name">{{item.name}}/{{item.unit_name}}</                   view>
+        <view class="sp_info">
+        <text class="price">￥{{item.price}}</text>
+          <image catchtap="purchase" data-id="{{item.id}}" class="purchase" src="../images/buy.png"></image>
+        </view>
+    </view>
+  </view>
+    <!-- <view class="tips1">
+       <view wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <text>玩命的加载中...</text></view> 
+       <view wx:else class="text_bottom"><text>没有更多内容了</text></view> 
+    </view> -->
+  </scroll-view>  
+
+  <view class='shadow' hidden='{{shadow}}'>
+    <view class='operation' animation="{{animationData}}">
+        <view class='box1'>
+            <view class='shop_img'>
+                <image src='{{oss}}{{goodsDetail.major_pic_url}}'></image>
+            </view>
+            <view class='shop_info'>
+                <text  class="st_price" wx:if="{{goodsDetail.style.length>0}}">￥{{style.price}}</text>
+                <text  class="st_price" wx:else>￥{{goodsDetail.price}}</text>
+                <text wx:if="shop.style" wx:if="{{goodsDetail.style.length>0}}">库存{{style.stock_sum}}</text>
+                <text wx:else>库存{{goodsDetail.stock_sum}}</text>
+                <text  wx:if="{{goodsDetail.style.length>0}}">规格:{{style.name}}</text>
+            </view>
+            <view class='close' catchtap='close'><image src="../images/close.png"></image></view>
+        </view>
+        <view class='box2'>
+            <view wx:if="{{goodsDetail.style.length>0}}">
+                <text class='spec_title'>食品口味</text>
+                <view class='spec_cen'>
+                    <text class="{{spec_id == item.style_id ? 'ys1' : ''}}"  wx:for="{{goodsDetail.style}}" data-id="{{item.style_id}}" data-style="{{item}}" catchtap="set_spec" >{{item.name}}</text>
+                </view>
+            </view>
+            <view class='number'>
+                <view class='num_title'>购买数量</view>
+                <view class='ji'>
+                    <view class="jian" catchtap="commodity_reduce">-</view>
+                    <view class="num">{{this_default_number}}</view>
+                    <view class="jia" catchtap="commodity_plus">+</view>
+                </view>
+            </view>
+        </view>
+        <view class="definiter">
+          <view class="button1" catchtap="addShopcar">加入购物车</view>
+          <view class="button2" catchtap="confirm_order">立即购买</view>
+        </view>
+        
+    </view>
+</view>
+</view>
+<view class="classname">
+  <view class="Prompt" hidden="{{prom}}">请选择商品规格</view>
+   <view class="Prompt" hidden="{{prom2}}">已成功加入购物车</view>
+</view>
+  

@@ -1,0 +1,30 @@
+<view>
+  <view class="masking" style="display:{{add}}" catchtap="hidde">
+    <view class="addres_list" catchtap="show_add2">
+      <view class="add_box">
+
+        <view class="xq_list {{item.status=='unabled' ? 'selected' : ''}}" wx:for="{{address_list}}" wx:key="{{item.id}}" data-add_id="{{item.id}}" data-status="{{item.status}}" catchtap="add_address">
+
+          <view class="add_lb">
+            <text class="add_name">{{item.name}}</text> <text class="add_dh">{{item.tel}}\n</text>
+            <view class="add_dz">{{item.prov}}{{item.city}}{{item.country}}{{item.address}}</view>
+          </view>
+          <view class="bianji">
+          <view class="use">
+            <view class="ico">
+              <icon wx:if="{{item.id==address.id}}" class="state" type="success_no_circle" size="20"></icon>
+            </view>
+            <view class="icon_text">使用此地址</view>
+          </view>
+          
+            <view class="add_clear" catchtap="clear_address" data-id="{{item.id}}">删除</view>
+            <view class="add_bj" catchtap="bj_address" data-address="{{item}}">编辑</view>
+          </view>
+
+        </view>
+      </view>
+      <view class="added" catchtap="returned">新增收货地址</view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,545 @@
+.main {
+  font-size: 14px;
+  background-color: #f2eff5;
+  margin-bottom:150rpx;
+    
+}
+page{
+font-family:  "Microsoft YaHei", Verdana, Arial, sans-serif, "Times New Roman", 宋体;
+}
+.address {
+  padding: 10px 30rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  background-color: #fff;
+  /* padding-bottom:0;  */
+}
+.addres {
+  padding: 10px 30rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  background-color: #fff;
+  padding-bottom:12px;
+  background: #fff url(https://www.weiwoju.com/Public/wap/dinner2/image/arr.png) no-repeat right; 
+  background-position-x: 96%;
+  background-size: 2.5%;
+}
+.addres_text{
+  display:block;
+float:left;
+width:470rpx;
+
+}
+.border {
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/add_border.png);
+  height: 15rpx;
+  width: 100%;
+}
+.yhq{
+  font-family: "Microsoft YaHei", Verdana, Arial, sans-serif, "Times New Roman";
+}
+.add_tex {
+  color: #f63;
+}
+.cl{
+  background-color:#f2eff5;
+}
+
+.add_img {
+  width: 40rpx;
+  height: 49rpx;
+  float: left;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+  margin-right: 20rpx;
+}
+
+.pay {
+  /* border-bottom: 1px solid #d3d3d3; */
+}
+
+.add {
+  overflow: hidden;
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/arr.png) no-repeat right;
+  background-size: 2.5%;
+  background-position-x: 100%;
+  margin-top:9px;
+
+}
+.eat_num{
+  float:right;
+  color:#888;
+}
+.address_lxr {
+  display: block;
+  line-height: 60rpx;
+  font-size: 12pt;
+}
+.address_lxr text{
+  float: right;
+  margin-right: 40rpx;
+}
+
+.address_xq {
+  display: block;
+  line-height: 46rpx;
+  font-size: 10pt;
+  width:610rpx;
+
+}
+
+.address_time {
+  display: block;
+  line-height: 40rpx;
+  font-size: 10pt;
+}
+.tota_prc{
+  float:right;
+ color:#ff6633;
+}
+.box1{
+  border-top:3px solid #F2EFF5;
+ overflow: hidden; 
+ padding: 20rpx 20rpx;
+ background-color: #fff;
+}
+.shop_img{
+  width: 150rpx;
+  height: 150rpx;
+  float: left;
+}
+.shop_img image{
+  width: 100%;
+  height: 100%;
+}
+.shop_info {
+  width: 60%;
+    float: left;
+    display: flex;
+    margin-left: 20rpx;
+  
+    font-size: 14px;
+    flex-direction: column;
+}
+.shop_style{
+  line-height: 30px;
+}
+.price{
+  float: right;
+  display: flex;
+  line-height: 60rpx;
+  text-align: right;
+    flex-direction: column;
+}
+.coupon {
+  margin-top: 5px;
+  padding: 5px 30rpx;
+  font-size: 30rpx;
+  padding-right: 0;
+  background-color: #fff;
+
+}
+.shop{
+  background-color: #fff;
+}
+.shop_name{
+  /* width: 100%; */
+  line-height: 80rpx;
+  padding-left: 20rpx;
+}
+
+.coupon .box1 {
+  /*background: url(http://www.weiwoju.com/Public/wap/dinner2/image/arr.png) no-repeat right;*/
+  background-size: 2%;
+  padding-right: 30rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+}
+
+.coupon .box1 .fl {
+  float: left;
+}
+
+.coupon .box1 .fr {
+  float: right;
+}
+
+.coupon .box2 {
+  background-size: 2%;
+  padding-right: 30rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+  /*margin-right:30rpx;*/
+}
+
+.counp {
+  border-top:1px solid #ececec;
+  margin-right: 30rpx;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/arr.png) no-repeat right;
+}
+
+.bz {
+border-top:1px solid #ececec;
+   margin-right: 30rpx;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/arr.png) no-repeat right;
+}
+
+.coupon .box2 .fl {
+  float: left;
+}
+.zx{
+  z-index: 0;
+}
+.coupon .box2 .fr {
+  display: block;
+  height: 80rpx;
+  /*text-overflow: clip;*/
+  overflow: hidden;
+  /*white-space: nowrap;*/
+  font-family: UICTFontTextStyleBody;
+  min-height: 80rpx;
+  text-align: right;
+  color:#888;
+}
+.coupon .box2 .frs{
+  height:80rpx;
+  overflow:hidden;
+  font-family:UICTFontTextStyleBody;
+  min-height:80rpx;
+  text-align:right;
+}
+
+.coupon .box3 .fr {
+  float: right;
+}
+
+.content {
+  margin-top: 5px;
+  font-size: 30rpx;
+  background-color: #fff;
+  padding-bottom: 130rpx;
+  padding-right: 0;
+}
+
+.content_shop {
+  line-height: 80rpx;
+  /*display: block;*/
+}
+
+.w {
+  padding-right: 30rpx;
+}
+.shoplog {
+  border-bottom: 1px solid #d3d3d3;
+  line-height: 60rpx;
+}
+
+.content_shopcar {
+  line-height: 80rpx;
+  overflow: hidden;
+}
+
+.content_shopcar .shop_name {
+  width: 310rpx;
+  display: block;
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.content_shopcar .shop_style {
+  display: block;
+  float: left;
+  width: 120rpx;
+}
+
+.content_shopcar .shop_num {
+  width: 60px;
+  display: block;
+  float: left;
+  text-align: left;
+}
+
+.content_shopcar .shop_pric {
+  display: block;
+  float: right;
+  width: 220rpx;
+  text-align:right;
+}
+
+.chf {
+  border-top: 1px solid #d3d3d3;
+}
+
+.content .box1 {
+  line-height: 80rpx;
+  overflow: hidden;
+  margin-top:0;
+ padding:0 20rpx;
+
+}
+
+.content .box1 .fl {
+  float: left;
+}
+
+.content .box1 .fr {
+  float: right;
+}
+
+.porder {
+  background-color: #fff;
+  /*border-top: 2px solid #f2eff5;*/
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  position: fixed;
+  bottom: 0;
+}
+
+.porder .total {
+  line-height: 110rpx;
+  font-size: 16px;
+  margin-left: 0.4rem;
+}
+
+.porder .pl_order {
+  float: right;
+  background-color: #f63;
+  color: #fff;
+  width: 280rpx;
+  font-size: 18px;
+  border: none;
+  line-height: 110rpx;
+  text-align: center;
+}
+
+.prc {
+  color: #f63;
+  font-size: 20px;
+}
+
+.shop_log {
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-table;
+  /*float: left;*/
+}
+
+.masking {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  background: rgba(92, 92, 92, 0.47);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.addres_list {
+  font-size: 14px;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  height: 710rpx;
+  bottom: 0;
+}
+
+.add_title {
+  padding: 0 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  background-color:#fff;
+  font-size: 12pt;
+}
+.esc{
+  width:50rpx;
+  height:50rpx;
+  float:right;
+  margin-top:14rpx;
+}
+.add_title text {
+  float: left;
+}
+
+.xq_list {
+  padding-right:0;
+  padding: 10rpx 20rpx;
+  overflow: hidden;
+  border-bottom: 1px solid #d3d3d3;
+  background-color:#fff;
+}
+
+.add_box {
+  height: 550rpx;
+  overflow: auto;
+  padding-bottom: 90rpx;
+}
+
+.add_lb {
+  line-height: 50rpx;
+  padding:20rpx 0;
+}
+
+.add_bj {
+  float: right;
+  width: 126rpx;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/bj1.png) no-repeat;
+  height: 56rpx;
+  background-size: 40%;
+  margin-top: 20rpx;
+margin-right:28rpx;
+line-height:56rpx;
+text-align:right;
+font-size:14p
+}
+
+.add_clear {
+  float: right;
+  width: 126rpx;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/sc2.png) no-repeat;
+  height: 56rpx;
+  background-size: 40%;
+  margin-top: 20rpx;
+ margin-right:10rpx;
+line-height:56rpx;
+text-align:right;
+
+}
+
+.add_lb .add_name {
+  margin-right: 200rpx;
+}
+.ico{
+width:40rpx;
+height:40rpx;
+border-radius:50%;
+border:1px solid #d3d3d3;
+float:left;
+margin-top:32rpx;
+
+}
+.state {
+  float: left;
+  line-height:40rpx;
+}
+
+.fl {
+  float: left;
+}
+
+.added {
+  width: 100%;
+  text-align: center;
+  line-height: 90rpx;
+  height: 90rpx;
+  color: #fff;
+  background-color: #f63;
+  position: fixed;
+  bottom: 0;
+}
+
+.ul {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  height: 400rpx;
+  bottom: 0;
+  overflow: scroll;
+}
+.bianji {
+  border-top: 1px solid #d3d3d3;
+  width: 100%;
+}
+
+.ul text {
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid #f2eff5;
+  line-height:80rpx;
+}
+.ullist{
+  height: 50rpx;
+  border-top: 1px solid springgreen;
+  border-bottom: 1px solid springgreen;
+}
+.coupon_list{
+  position: absolute;
+  width: 100%;
+  background-color: #f2eff5;
+  /*height: 60%;*/
+  bottom: 0;
+
+  overflow: scroll;
+}
+.coupon_list text{
+  line-height:60rpx;
+
+    display: flex;
+  flex-direction:row; 
+}
+.coupons{
+  background: #ffffff;
+  font-size: 16px;
+  border-bottom: 1px solid #d3d3d3;
+  overflow:hidden;
+  padding:0 20rpx;
+}
+.coupon_name{
+  margin-right: 10rpx;
+}
+.coupons_box{
+  float: left;
+  color:#b7b6ba;
+}
+.coupon_limit{
+font-size: 12px;
+}
+.counp_s{
+  float: right;
+position: relative;
+}
+.sta{
+  position: absolute;
+}
+.coupon_value{
+  float: right;
+  margin-right: 20rpx;
+  margin-top:33rpx;
+  color: #b7b6ba;
+  text-decoration: line-through;
+}
+.style_bac1 {
+  color: #000;
+}
+.coupon_pric1 {
+ color: #FF6633;
+text-decoration: none;
+}
+.coupon_none{
+  font-size:12pt;
+text-align:center;
+margin-top:40%;
+
+}
+.coupon_xz{
+float:right;
+margin-top:24rpx;
+height:33rpx;
+
+}
+.zx{
+  z-index: 0
+}
+wx-input div div{
+  z-index: 0;
+}
+.selected{
+color:#acacac;
+
+}

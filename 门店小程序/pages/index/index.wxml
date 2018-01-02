@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="shop_img">
+    <image src="{{shop.shoplogo_url}}"></image>
+  </view>
+  <view class="shop_info">
+    <view class="shop_name">{{shop.shop_name}}</view>
+    <!-- <view class="shop_add">{{shop.address}}</view> -->
+    <view wx:if="{{shop.full_subtract}}" class="shop_coup"><text class="icn">减</text>{{shop.full_subtract}}</view>
+    <view class="shop_coup">
+      <!-- <text class="icn">减</text> -->
+      <text>起送￥{{shop.delivery_limit}}</text> | <text>配送￥{{shop.delivery_price}}</text>
+    </view>
+  </view>
+
+    <view wx:if="{{appid2.appid}}" class="jump"  data-id="{{appid2.appid}}" catchtap="payment">去买单</view>  
+</view>
+<view class="other">
+  <view class="address">{{shop.address}}</view>
+  <view data-tel="{{shop.tel}}" catchtap="tell" class="tel">
+    <!-- <view class="call">{{shop.tel}}</view> -->
+    <image src="../images/tel2.png"></image>
+  </view>
+</view>
+<!-- <view class="navigation">
+  <view class="classname">点外卖</view> 
+</view>
+<view class="navigation">
+<view class="" catchtap="get_number">去取号</view>
+</view> -->
+<view class="member" wx:if="{{couponlist.length>0}}">
+  <view class="coupon" wx:for="{{couponlist}}">
+    <view class="vip_img">
+      <image wx:if="{{index %2 ==0}}" src="../images/coupon_bac.png"></image>
+      <image wx:else src="../images/coupon_bac2.png"></image>
+    </view>
+    <view class="cuopon_cent">
+      <view class="member_text">
+        <view class="m_text1"> <text class="price" >{{item.price}} </text> 元</view>
+        <text class="m_text2">满  {{item.use_limit}}元使用</text>
+      </view>
+      <view class="receive" catchtap="receive" data-id="{{item.id}}" data-card_id="{{item.wxcard_id}}">
+       <text data-id="{{item.id}}" data-card_id="{{item.wxcard_id}}">点击</text>
+        <text data-id="{{item.id}}" data-card_id="{{item.wxcard_id}}">领取</text>  
+      </view>
+    </view>
+
+  </view>
+
+</view>
+<view class="shop_intr {{couponlist.length>0 ? '' : 'ce'}}">
+  <view class="classname">店铺介绍：</view>
+  <view class="description">
+    <import src="../../wxParse/wxParse.wxml" />
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    <view class="support">
+      <image class="log" src="../images/bot_logo.png"></image>
+      <text class="sx_text">客无忧提供技术支持</text>
+    </view>
+    <!-- <image src="../images/"></image>  -->
+  </view>
+</view>
+
+<view class="foot" wx:if="{{appid2.appid||queue=='是'}}">
+  <view class="waim" wx:if="{{appid2.appid}}" data-id="{{appid2.appid}}" catchtap="jump">点外卖</view>
+  <view class="quh" wx:if="{{queue=='是'}}" catchtap="get_number">{{queue_text}}</view>
+</view>

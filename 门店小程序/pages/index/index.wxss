@@ -1,0 +1,259 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+page{
+      background-color: rgb(242, 239, 245);
+      font-family: 'Microsoft Yahei','PingFang SC','Helvetica Neue', Helvetica,'Droid Sans Fallback',sans-serif;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.navigation{
+  padding: 25rpx 20rpx;
+  font-size: 16px;
+  margin-top: 10rpx;
+
+  /* background-position-x: 20rpx; */
+   background-color: #fff;
+}
+.coupon_title{
+  font-size: 14px;
+}
+.coupon{
+  padding: 10rpx 30rpx; 
+  position: relative;
+  background-color: #f3eff5;
+}
+.cuopon_cent{
+  position: absolute;
+  overflow: hidden;
+  top: 20rpx;
+  width: 90%;
+  padding:10rpx 0;
+}
+.navigation view{
+    background: url(https://www.weiwoju.com/Public/wap20/downpay_bonus/image/jt.png) no-repeat right;
+    background-size:3%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.shop_name{
+  font-size: 16px;
+}
+.usermotto {
+  margin-top: 200px;
+}
+.container {
+  padding:32rpx 20rpx;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+}
+.icn{
+  display: block;
+  width: 38rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  text-align: center;
+  font-size: 12px;
+  background: #ff6633;
+  color: #fff;
+  float: left;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+
+}
+.shop_img{
+  width: 150rpx;
+  height: 150rpx;
+  float:left;
+  margin-top:11rpx;
+
+}
+.shop_img image{
+  width: 100%;
+  height: 100%;
+}
+.shop_info{
+  margin-left: 8px;
+  font-size: 14px;
+  float: left;
+  line-height: 64rpx;
+}
+.shop_add{
+color: #999999;
+}
+.shop_coup{
+  color: #999999;
+}
+.jump{
+  position: absolute;
+  bottom: 100rpx;
+  right: 25rpx;
+  color: #3385ff;
+  font-size: 14px;
+  padding: 5px 15px;
+  border: 1px solid #3385ff;
+  border-radius: 5px;
+}
+.other{
+  border-top: 1px solid rgb(242, 239, 245);
+  font-size: 14px;
+  overflow: hidden;
+  line-height: 52rpx;
+  padding: 25rpx 20rpx;
+  background-color: #fff;
+}
+.address{
+  float: left;
+  background: url('http://www.weiwoju.com/Public/wap/wxWap/images/dzm.png') no-repeat;
+  padding-left:56rpx;
+  background-position-y: 5rpx;
+}
+.tel{
+ float:right;
+overflow: hidden;
+height:46rpx;
+padding:10rpx;
+margin-right:22rpx;
+
+}
+.call{
+  float: left;
+  margin-right: 10rpx;
+  color: #0c79b1;
+}
+.tel image{
+width:46rpx;
+height:46rpx;
+
+
+}
+.vip_img{
+
+height: 190rpx;
+width: 100%;
+}
+.vip_img image{
+  width: 100%;
+  height: 100%;
+}
+.member{
+  padding: 0px 8px;
+  overflow: hidden;
+  background-color:  #f3eff5;
+  margin-top: 4px;
+}
+.member_text{
+  float: left;
+  height:100rpx;
+  padding: 20rpx 0;
+  line-height: 100rpx;
+  width: 50%;
+  overflow: hidden;
+  padding-left: 100rpx;
+  padding-right: 50rpx;
+  border-right: 1px solid #ccc;
+}
+.m_text1{
+  color: #ff6633;
+  font-size: 16pt;
+   float: left; 
+}
+.price{
+  font-size: 20pt;
+}
+.m_text2{
+  font-size: 12px;
+  color:#acacac;
+float: right;
+}
+.receive{
+  float:right;
+  font-size:12pt;
+ width: 20%;
+ padding-top: 10rpx;
+  color:#ff6633;
+  text-align:center;
+  line-height:48rpx;
+  margin-right:10rpx;
+  margin-top:18rpx;
+  border-radius:5rpx;
+}
+.receive text{
+  display: block;
+}
+.ce{
+  min-height:670rpx !important;
+}
+.shop_intr{
+  background-color: #fff;
+  position: relative;
+  margin-top: 10rpx;
+  min-height:500rpx;
+  font-size: 14px;
+  padding: 30rpx 15rpx;
+  margin-bottom: 120rpx;
+}
+.content-pic{
+  width: 100%;
+}
+.content-pic image{
+  width: 100% !important;
+}
+.foot{
+     display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  color: #fff;
+  padding: 20rpx 0;
+  font-size: 16px;
+}
+.foot .waim{
+  border-radius: 3px;
+  background-color: #ff6633;
+  width: 35%;
+  padding: 25rpx 20rpx;
+text-align: center;
+}
+.quh{
+  border-radius: 3px;
+  background-color: #0c79b1;
+   width: 35%;
+    padding: 25rpx 20rpx;
+text-align: center;
+}
+.support{
+     position:absolute;
+    bottom:20rpx; 
+    left: 32%;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.log{
+display: block;
+  float: left;
+  width: 40rpx;
+  height: 50rpx;
+  
+}
+.sx_text{
+  display: block;
+  float: left;
+  font-size: 12px;
+  color: rgb(204, 204, 204);
+  margin-top: 15rpx;
+  margin-left:15rpx;
+}

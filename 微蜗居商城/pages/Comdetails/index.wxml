@@ -1,0 +1,96 @@
+<swiper class="com_img" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{oss}}{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <view class='price_info'>
+    <text class="label">限时折扣</text>
+    <view class='price'>
+        <text class='price1'><text class='fz'>￥</text>{{shop.price}}</text>
+        <text class='price2'>￥{{shop.price}}</text>
+    </view>
+    <view class='discount'>
+        距离结束仅剩15天
+    </view>
+</view> -->
+<view class='shop_name'>
+  <text>{{shop.name}}</text>
+  <view style="color:#ff6633;">￥<text class='ys'>{{shop.price}}</text></view>
+</view>
+<view class="shop_qt">
+  <text wx:if="{{shop_info.express_price>0}}">运费：{{shop_info.express_price}}</text>
+  <text wx:else>免运费</text>
+  <text class="xl">销量：{{shop.sale_sum}}</text>
+</view>
+<view class='btn'>
+  <view class="index" catchtap="home">
+    <image src="../images/home1.png"></image>
+    <text>首页</text>
+  </view>
+    <view class="contact" >
+    <image src="../images/kf.png"></image>
+    <text>客服</text>
+    <contact-button class="con_btn" type="default-light" size="100"session-from="weapp"></contact-button>
+  </view>  
+   <!-- <contact-button class="contact" size="0" type="default-light" session-from="weapp">
+     <image src="../images/home1.png"></image> 
+    <text>客服</text> 
+    </contact-button>  -->
+  <view class='home' catchtap="shopCar">
+    <image src="../images/shopcar.png"></image>
+    <text>购物车</text>
+    <view class="spot"  hidden='{{state}}' ></view>
+  </view>
+  <view class='buy'>
+    <view class="shopcar" catchtap="add_shopcar">加入购物车</view>
+    <view class="classname" catchtap='buy'>立即购买</view>
+  </view>
+</view>
+<view class='shadow' hidden='{{shadow}}'>
+  <view class='operation' animation="{{animationData}}">
+    <view class='box1'>
+      <view class='shop_img'>
+        <image src='{{oss}}{{shop.major_pic_url}}'></image>
+      </view>
+      <view class='shop_info'>
+        <text class="st_price" wx:if="{{shop.style.length>0}}">￥{{style.price}}</text>
+        <text class="st_price" wx:else>￥{{shop.price}}</text>
+        <text wx:if="shop.style" wx:if="{{shop.style.length>0}}">库存{{style.stock_sum}}</text>
+        <text wx:else>库存{{shop.stock_sum}}</text>
+        <text wx:if="{{shop.style.length>0}}">规格:{{style.name}}</text>
+      </view>
+      <view class='close' catchtap='close'>
+        <image src="../images/close.png"></image>
+      </view>
+    </view>
+    <view class='box2'>
+      <view wx:if="{{shop.style.length>0}}">
+        <text class='spec_title'>食品口味</text>
+        <view class='spec_cen'>
+          <text class="{{spec_id == item.style_id ? 'ys1' : ''}}" wx:for="{{shop.style}}" data-id="{{item.style_id}}" data-style="{{item}}" catchtap="set_spec">{{item.name}}</text>
+        </view>
+      </view>
+      <view class='number'>
+        <view class='num_title'>购买数量</view>
+        <view class='ji'>
+          <view class="jian" catchtap="commodity_reduce">-</view>
+          <view class="num">{{this_default_number}}</view>
+          <view class="jia" catchtap="commodity_plus">+</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{addShop==false}}" class='definiter' catchtap="confirm_order">下一步</view>
+    <view wx:else class='definiter' catchtap="addShopcar">确定</view>
+  </view>
+</view>
+<view class='product_bri'>
+  <import src="../../wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+</view>
+<view class="classname">
+  <view class="Prompt" hidden="{{prom}}">请选择商品规格</view>
+  <view class="Prompt" hidden="{{prom2}}">已成功加入购物车</view>
+</view>

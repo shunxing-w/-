@@ -1,0 +1,41 @@
+<view class="main">
+  <view class="tab">
+    <text wx:for="{{ order_state}}" class="{{state == item.id ? 'liboder' : ''}}" data-state="{{item.state}}" catchtap='state_tab'>{{item.state}}</text>
+  </view>
+    <scroll-view scroll-x="false" style="height: {{ windowHeight+'px'}}" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower">
+  <view style="padding-top:70rpx; background-color:#F2EFF5;">
+     <!--全部订单-->
+    <block wx:if="{{order!=''}}" id="whole"  class="order">
+        
+        <view wx:for="{{order}}" class="order_list" wx:key="{{item.id}}"  data-id="{{item.no}}" catchtap="returned">
+   <view class="order_top">
+              <view class="shop_nmae">订单编号：{{item.no}}</view>
+              <view class="order_staus">{{item.status}}</view>
+        </view>
+        <view class="order_in" wx:for="{{item.prolist}}" wx:for-item="shop" >
+            <view class="order_cen">
+                    <image src="{{oss}}{{shop.product_pic_url}}" class="order_shop"/>
+                    <view class="order_text">
+
+                        <text class="order_shopname">{{shop.name}}</text>
+                        <text class="order_time">{{shop.style_name}}</text>
+                     </view>
+                </view>
+                <view class="order_prc">
+                   <text class="order_shoppric">￥{{shop.price}}</text>
+                   <text>X{{shop.num}}</text>
+                </view>
+        </view>
+                
+        <view class="order_bot">
+              <view class="shop_total">合计： <text> ￥{{item.price}}</text></view>
+        </view>
+        </view>
+    </block>
+    <block wx:else>
+     <view class="no_order">暂无当前订单 </view>
+    </block>
+  </view>
+  </scroll-view>  
+</view>
+  <loading hidden="{{hidden}}"></loading>

@@ -1,0 +1,328 @@
+/**index.wxss**/
+page{
+  font-family: "Microsoft YaHei";
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container{
+  padding: 15rpx 0;
+  background-color: #f5f4f9;
+}
+.goods{
+  text-align: center;
+  padding: 10rpx 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom:8rpx;
+}
+.la{
+position: absolute;
+top: 0;
+width: 100%;
+  height: 100rpx;
+  z-index: 200;
+}
+.goods .shopImg{
+  width:700rpx;
+  height: 324rpx;
+}
+.goods_name{
+  float: left;
+  margin: 0 auto;
+   width: 560rpx;
+   line-height: 60rpx;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+.goods_info{
+  overflow: hidden;
+  float: left;
+  padding-left:20rpx;
+}
+.goods_price{
+  text-align: left;
+  float: right;
+  color: #ff6633;
+  font-weight: 600;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.text_bottom{
+ display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;
+}
+.box{
+  overflow: hidden;
+  padding: 0 20rpx;
+  padding-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  background-color: #f5f4f9;
+}
+.fl{
+  /* float: left; */
+ 
+  width: 48%;
+  padding: 18rpx 0;
+  background-color: #fff;
+  margin-right: 14rpx;
+   margin-top: 15rpx;
+   padding-top: 0;
+}
+.fr{
+  float: right;
+   width: 49%;
+    padding: 25rpx 0;
+    background-color: #fff;
+    margin-top: 15rpx;
+}
+.min_img{
+  width: 100%;
+  height: 310rpx;
+}
+.sp_info{
+  width: 90%;
+   margin-left: 16rpx;
+  font-size: 12px;
+}
+.sp_name{
+  line-height:40rpx;
+  height: 80rpx;
+  width: 90%;
+  margin-left:20rpx;
+  font-size: 13px;
+  overflow: hidden;
+}
+.price{
+  color: #ff6633;
+  font-family: 'Microsoft YaHei', 'Arial Narrow', Arial, sans-serif;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.buy{
+  float: right;
+  margin-right:30rpx;
+  padding-top: 15rpx;
+}
+.buy image{
+  /* float: right; */
+  width: 70rpx;
+  height:70rpx;
+}
+.purchase{
+  float: right;
+  width: 60rpx;
+  height: 60rpx;
+}
+.ys1{
+color:#fff;
+background:#ff6633 !important;
+}
+
+
+.shadow {
+    position: fixed;
+    top: 0;
+    background-color: rgba(51, 51, 51, 0.75);
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+}
+
+.operation {
+    position: fixed;
+    bottom: 0;
+     height: 0%; 
+    width: 100%;
+    background: #fff;
+}
+
+.definiter {
+    width: 100%;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    background: #f63;
+    color: #fff;
+    text-align: center;
+    line-height:100rpx;
+}
+
+/* .box1{
+  position: absolute;
+  width: 100%;
+  top: 0;
+} */
+
+.box2 {
+    position: absolute;
+    width: 100%;
+    top: 240rpx;
+    padding: 10rpx 20rpx;
+}
+
+.spec_title {
+    font-size: 16px;
+    line-height: 80rpx;
+}
+
+.spec_cen {
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.spec_cen text {
+    background: #e5e5e5;
+    display: block;
+    border-radius: 10px;
+    float: left;
+    margin-right: 20rpx;
+    padding: 10rpx 15rpx;
+}
+
+.shop_img {
+    position: absolute;
+    width: 150rpx;
+    height: 150rpx;
+    padding:12rpx;
+    background: #fff;
+    top: -30rpx;
+    left: 30rpx;
+    border: 1px solid #ccc;
+    border-radius:5px;
+}
+
+.shop_info {
+    display: flex;
+    position: absolute;
+    left: 250rpx;
+    font-size: 14px;
+    line-height: 25px;
+    flex-direction: column;
+}
+.shop_qt{
+  font-size: 12px;
+line-height: 30px;
+  color: #acacac;
+  padding-left:3%;
+  background-color: #fff;
+}
+.xl{
+  margin-left: 30px;
+}
+.shop_info .st_price{
+  color: #ff6633;
+  font-size: 14pt;
+}
+.number {
+    overflow: hidden;
+    margin-top: 40rpx;
+    border-top: 1rpx solid #ececec;
+    padding: 30rpx 30rpx;
+    border-bottom: 1rpx solid #ececec;
+}
+
+.num_title {
+    line-height: 60rpx;
+    font-size: 16px;
+    float: left;
+}
+
+.ji {
+    float: right;
+    text-align: center;
+}
+
+.ji view {
+    float: left;
+}
+
+.jia {
+    background-color: #e4e4e4;
+    width: 90rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    color: #5f646e;
+}
+
+.jian {
+    background-color: #e4e4e4;
+    width: 90rpx;
+    line-height: 70rpx;
+    height: 70rpx;
+    text-align: center;
+    color: #5f646e;
+}
+.num{
+  width: 100rpx;
+  line-height: 70rpx;
+}
+
+.close {
+position:absolute;
+right:30rpx;
+top:20rpx;
+font-size:40rpx;
+color: #333233;
+width:56rpx;
+text-align:center;
+line-height:58rpx;
+height:56rpx;
+
+border-radius:50%;
+font-weight:900;
+
+}
+.close image{
+  width: 100%;
+  height: 100%;
+}
+
+.shop_img image {
+    width: 100%;
+    height: 100%;
+}
+.Prompt{
+  position: fixed;
+  top: 45%;
+  left: 35%;
+  color: #fff;
+   background-color: rgb(51, 51, 51);
+   font-size: 14px;
+   z-index: 999;
+   padding: 20rpx 40rpx;
+
+
+}
+.button1{
+  float: left;
+  width: 50%;
+  background-color: #ff8855;
+}
+.button2{
+  float: left;
+  width: 50%;
+  background-color: #ff4444;
+}
+.Prompt{
+  position: fixed;
+  top: 45%;
+  left: 30%;
+  color: #fff;
+   background-color: rgb(51, 51, 51);
+   font-size: 14px;
+   z-index: 999;
+   padding: 20rpx 40rpx;
+
+
+}

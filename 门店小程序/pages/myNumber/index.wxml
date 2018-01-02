@@ -1,0 +1,28 @@
+<!--pages/myNumber/index.wxml-->
+<view class="box">
+  <view class="order">
+    <view class="shop">
+      <text class="shop_name">{{shop.shop_name}}</text>
+
+    </view>
+    <view class="state">
+     <text>{{queue_info.no}}</text>
+      <text class="tablx">({{queue_info.queue_type}})</text>
+      
+    </view>
+    <view class="bor"></view>
+  </view>
+  <view class="table">
+    <view class="table_time">
+        <view class=""><text class="hxdd">还需等待</text><text class="ys">{{queue_info.num}}桌</text></view>
+         <view class=""><text class="ygdd">预估等待</text><text class="ys">{{queue_info.expect_minute}}分钟</text>
+         </view>
+         <view class=""><text class="ygdd">取号时间:</text><text class="ygdd">{{queue_info.create_time}}</text>
+         </view>
+   </view>
+    <view class="tableNum">
+      <text class="tabnum">{{queue_info.status}}</text>
+     
+    </view>
+  </view>
+</view>

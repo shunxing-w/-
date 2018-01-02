@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="box">
+    <view class="order" catchtap="myorder" data-state="全部订单">
+      <text>我的订单</text> <text style="margin-right:35rpx;">查看全部订单</text>
+    </view>
+    <view class="order_list">
+      <view class="btn" catchtap="myorder" data-state="待支付">
+        <image src="../images/D_payment.png"></image>
+        <text class="order_text">待支付</text>
+      </view>
+      <view class="btn" catchtap="myorder" data-state="待发货">
+        <image src="../images/Deliver.png"></image>
+        <text class="order_text">待发货</text>
+      </view>
+      <view class="btn" catchtap="myorder" data-state="待收货">
+        <image src="../images/receipt.png"></image>
+        <text class="order_text">待收货</text>
+      </view>
+      <view class="btn" catchtap="myorder" data-state="已完成">
+        <image src="../images/complete.png"></image>
+        <text class="order_text">已完成</text>
+      </view>
+    </view>
+  </view>
+  <view class="shopcar" catchtap="myaddress">
+    <text>我的地址</text>
+  </view>
+  <!-- <view class="shopcar">
+    <text>购物车</text>
+  </view> -->
+  <view class="support">
+  <image class="log" src="../images/bot_logo.png"></image>
+  <text class="sx_text">客无忧提供技术支持</text>
+  </view>
+</view>

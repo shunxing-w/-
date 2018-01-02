@@ -1,0 +1,118 @@
+/**index.wxss**/
+.top_img{
+  width: 100%;
+  text-align: center;
+  padding: 50rpx 0;
+}
+.top_img image{
+width:46%;
+height:158rpx;
+
+}
+.shop_tab{
+  text-align: center;
+}
+.hide{
+  display: block;
+}
+.title{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  background-color: #f2f1f1; 
+  padding: 30rpx 0;
+  justify-content:space-around;
+  text-align: center;
+}
+.borys{
+  border: 1px solid #ff6633 !important;
+  color: #ff6633;
+}
+
+.mask {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(71, 71, 71, 0.63);
+     /* display: none;  */
+}
+.tableid {
+    width:85%;
+    position: absolute;
+    top: 35%;
+    margin: 0 auto;
+    left: 30%;
+    margin-left: -23%;
+    margin-top: -25%;
+    background-color: #FFFFFF;
+    height:400rpx;
+    text-align: center;
+}
+.btn{
+  background-color: #ff6633 !important;
+  color: #fff;
+  width: 80%;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.tab_title{
+  line-height: 108rpx;
+}
+.pr_num{
+  color: #acacac;
+  font-size: 12px;
+}
+.table {
+    display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  margin: 20rpx 0;
+  margin-bottom:60rpx
+}
+.table view{
+  border: 1px solid #ccc;
+  padding: 15rpx 20rpx;
+}
+.shop_tab text{
+  display: block;
+}
+.conter{
+  font-size: 14px;
+  display: flex;
+   padding: 25rpx 0;
+  flex-direction: row;
+  justify-content:space-around;
+  border-bottom: 1px solid #f2f1f1;
+}
+.conter .num{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ff6633;
+  margin-right: 10rpx;
+}
+.operation{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  padding: 25rpx 0;
+  border-bottom: 1px solid #cecece;
+}
+.take_no{
+  margin-left: 20rpx;
+  background-color: #ff6633;
+  color: #fff;
+  font-size: 14px;
+  width: 350rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  line-height: 85rpx;
+}
+.shop_info{
+  font-size: 14px;
+}
+.shop_info view{
+  padding: 25rpx 20rpx;
+  border-bottom: 1px solid #ccc;
+}

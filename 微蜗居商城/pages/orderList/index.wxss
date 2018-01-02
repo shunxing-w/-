@@ -1,0 +1,113 @@
+.main{
+    width: 750rpx;
+    height: 100%;
+}
+page{
+  font-family:  "Microsoft YaHei", Verdana, Arial, sans-serif, "Times New Roman", 宋体;
+}
+.tab{
+    overflow: hidden;
+    position:fixed;
+    background-color:#fff;
+    z-index:999;
+}
+.tab text{
+    text-align: center;
+    line-height: 85rpx;
+    display: block;
+    width: 150rpx;
+    height: 85rpx;
+    font-size: 14px;
+    float: left;
+}
+.liboder {
+    border-bottom: 2px solid #ffaf04;
+    color: #ff690a;
+}
+.order_list{
+  margin-top: 15rpx;
+    overflow:hidden; 
+    padding: 20rpx 10rpx;
+   border-bottom:1px solid #ececec;
+   background-color:#fff;
+}
+.order_cen{
+    overflow: hidden;
+    float: left;
+}
+.order_shop{
+    float: left;
+    width: 150rpx;
+    height: 150rpx;
+    margin-right: 20rpx;
+}
+.order_text{
+    line-height:24px;
+    float: left;
+   color: #a8a8a8;
+  width:400rpx;
+}
+.order_shopname{
+        display: block;
+    font-size: 14px;
+    overflow: hidden;
+ color: #000;
+ word-break: break-all;
+}
+.order_time{
+    display: block;
+    width:450rpx;
+    font-size: 14px;
+    
+}
+.order_bot{
+  clear: both;
+  width: 100%;
+}
+.order_bot .shop_total{
+text-align: right;
+font-size: 14px;
+}
+.shop_total text{
+  color: #ff6633;
+  padding-right: 10px;
+}
+.order_shoppric{
+    color: #ff6633;
+    display: block;
+    width: 120rpx;
+    font-size: 14px;
+}
+.order_in{
+  overflow: hidden;
+  padding: 10px 5px;
+   background-color: #fff;
+}
+.order_prc{
+    float: right;
+    width: 111rpx;
+    font-size: 14px;
+    line-height:35px;
+text-align:center;
+
+}
+.order_top{
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 40px;
+}
+.order_top .shop_nmae{
+  float: left;
+
+}
+.order_top .order_staus{
+  float: right;
+    color: #ff6633;
+    padding-right: 10px;
+}
+.no_order{
+  text-align:center;
+  font-size:12pt;
+  line-height:400rpx;
+  background-color: #fff;
+}

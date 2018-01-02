@@ -1,0 +1,86 @@
+/* pages/myInfo/index.wxss */
+page{
+  background-color: #f5f4f9;
+  font-family:  "Microsoft YaHei", Verdana, Arial, sans-serif, "Times New Roman", 宋体;
+}
+.userinfo{
+  text-align: center;
+  padding: 50rpx 0;
+  background-color: #fff;
+}
+.userinfo-avatar{
+  border-radius: 50%;
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid #ccc;
+}
+.userinfo-nickname{
+  display: block;
+}
+.order{
+  margin-top: 20rpx;
+  display: flex;
+  font-size: 14px;
+  justify-content:space-between;
+  padding: 25rpx 20rpx;
+  background: url(http://weiwoju.com/Public/wap20/downpay_bonus/image/jt.png) no-repeat;
+    background-position-x:97%;
+   background-size: 3%;
+   background-position-y:26rpx;
+  background-color: #fff;
+  
+}
+.box{
+  background-color: #fff;
+}
+.order_list {
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.shopcar{
+font-size:14px;
+padding:0 15rpx;
+line-height:90rpx;
+background:url(http://weiwoju.com/Public/wap20/downpay_bonus/image/jt.png) no-repeat;
+background-color:#FFF;
+background-position-x:97%;
+background-size:3%;
+background-position-y:30rpx;
+margin-top:15rpx;
+
+}
+.order_list image
+{
+  width: 50rpx;
+  height: 50rpx;
+}
+.order_text{
+  font-size: 14px;
+  display: block;
+}
+.btn{
+  text-align: center;
+}
+.support{
+     overflow: hidden;
+    position: fixed;
+    bottom: 30rpx;
+    left: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+.log{
+  width: 40rpx;
+  height:45rpx;
+  display: block;
+  float: left;
+}
+.sx_text{
+  font-size: 24rpx;
+  color: rgb(204, 204, 204);
+   margin-top: 10rpx;
+  margin-left: 20rpx;
+  float: left;
+}

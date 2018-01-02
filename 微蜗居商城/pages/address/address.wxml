@@ -1,0 +1,43 @@
+<!--pages/address/address.wxml-->
+<view class="main">
+<form bindsubmit="formSubmit">
+<view class="add_li" name>
+    <text class="fl">联系人：</text>
+    <view class="fl box"><input  name="name" type="text" placeholder="姓名"  focus="true" /></view>
+</view>
+<view class="add_li"><text class="fl">手机号码：</text>
+    <view class="fl box"><input bindinput="tel" maxlength='11' name="dh" type="number" placeholder="联系电话(必填)" /></view>
+    <!--<text class="mt">{{yztel}}</text>-->
+</view>
+<view class="add_li jt"><text class="fl">收货地址：</text>
+    <view  class="fl box" catchtap="open">
+     <!-- <input name="dz1" placeholder="地区信息" bindfocus="address_map" value="{{address}}" type="text" /> -->
+     <input  placeholder= "地区信息" name="dz" value="{{address_ct}}" disabled='true' />
+    </view>
+</view>
+<view class="add_li"><text class="fl">详细地址：</text>
+    <view  class="fl box">
+     <input name="dz1" placeholder="街道/小区/门牌号"   type="text" />
+    </view>
+</view>
+<view class="btn" ><button type="primary" formType="submit">保存</button></view>
+</form>
+<view hidden="{{condition}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open" class="city-cancel">取消</view>
+      <view bindtap="confirm" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+</view>
