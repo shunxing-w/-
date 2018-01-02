@@ -1,0 +1,657 @@
+.main {
+  font-size: 14px;
+  background-color: #f2eff5;
+  margin-bottom:150rpx;
+}
+
+.address {
+  padding: 10px 30rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+.addres_text{
+  display:block;
+float:left;
+width:470rpx;
+
+}
+.border {
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/add_border.png);
+  height: 15rpx;
+}
+.yhq{
+  font-family: "Microsoft YaHei", Verdana, Arial, sans-serif, "Times New Roman";
+}
+.add_tex {
+  color: #f63;
+}
+.cl{
+  background-color:#f2eff5;
+}
+.sign{
+  color: #888;
+}
+.add_img {
+  width: 40rpx;
+  height: 49rpx;
+  float: left;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+  margin-right: 20rpx;
+}
+
+.pay {
+  /*border-bottom: 1px solid #d3d3d3;*/
+}
+
+.add {
+  overflow: hidden;
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/arr.png) no-repeat right;
+  background-size: 3%;
+  background-position-x: 100%;
+}
+.eat_num{
+  float:right;
+  color:#888;
+}
+.address_lxr {
+  display: block;
+  line-height: 60rpx;
+  font-size: 12pt;
+}
+
+.address_xq {
+  display: block;
+  line-height: 70rpx;
+  font-size: 10pt;
+  width:610rpx;
+
+}
+
+.address_time {
+  display: block;
+  line-height: 40rpx;
+  font-size: 10pt;
+}
+.tota_prc{
+  float:right;
+ color:#ff6633;
+}
+
+.coupon {
+  margin-top: 5px;
+  padding: 5px 30rpx;
+  font-size: 30rpx;
+  padding-right: 0;
+  background-color: #fff;
+}
+
+.coupon .box1 {
+  /*background: url(http://www.weiwoju.com/Public/wap/dinner2/image/arr.png) no-repeat right;*/
+  background-size: 2%;
+  padding-right: 30rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+}
+
+.coupon .box1 .fl {
+  float: left;
+}
+
+.coupon .box1 .fr {
+  float: right;
+}
+
+.coupon .box2 {
+  background-size: 2%;
+  padding-right: 30rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+  /*margin-right:30rpx;*/
+}
+
+.counp {
+  margin-right: 30rpx;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/arr.png) no-repeat right;
+}
+
+.bz {
+  border-top: 1px solid #ececec;
+   margin-right: 30rpx;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/arr.png) no-repeat right;
+}
+
+.coupon .box2 .fl {
+  float: left;
+}
+.zx{
+  z-index: 0;
+}
+.coupon .box2 .fr {
+  display: block;
+  height: 80rpx;
+  /*text-overflow: clip;*/
+  overflow: hidden;
+  /*white-space: nowrap;*/
+  font-family: UICTFontTextStyleBody;
+  min-height: 80rpx;
+  text-align: right;
+  color:#888;
+}
+.coupon .box2 .frs{
+  height:80rpx;
+  overflow:hidden;
+  font-family:UICTFontTextStyleBody;
+  min-height:80rpx;
+  text-align:right;
+  width:300rpx;
+float:right;
+
+}
+
+.coupon .box3 .fr {
+  float: right;
+}
+
+.content {
+  margin-top: 5px;
+  padding: 10px 30rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+  padding-bottom: 130rpx;
+  padding-right: 0;
+}
+
+.content_shop {
+  line-height: 80rpx;
+  /*display: block;*/
+}
+
+.w {
+  padding-right: 30rpx;
+}
+.shoplog {
+  border-bottom: 1px solid #ececec;
+  line-height: 60rpx;
+}
+
+.content_shopcar {
+  line-height: 80rpx;
+  overflow: hidden;
+}
+
+.content_shopcar .shop_name {
+  width: 310rpx;
+  display: block;
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.content_shopcar .shop_style {
+  display: block;
+  float: left;
+  width: 120rpx;
+}
+
+.content_shopcar .shop_num {
+  width: 60px;
+  display: block;
+  float: left;
+  text-align: left;
+}
+
+.content_shopcar .shop_pric {
+  display: block;
+  float: right;
+  width: 220rpx;
+  text-align:right;
+}
+
+.chf {
+  border-top: 1px solid #ececec;
+}
+
+.content .box1 {
+  line-height: 35px;
+  overflow: hidden;
+  
+  padding-right: 30rpx;
+}
+
+.content .box1 .fl {
+  float: left;
+}
+
+.content .box1 .fr {
+  float: right;
+}
+
+.porder {
+  background-color: #fff;
+  /*border-top: 2px solid #f2eff5;*/
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  position: fixed;
+  bottom: 0;
+}
+
+.porder .total {
+  line-height: 110rpx;
+  font-size: 16px;
+  margin-left: 0.4rem;
+}
+
+.porder .pl_order {
+  float: right;
+  background-color: #f63;
+  color: #fff;
+  width: 280rpx;
+  font-size: 18px;
+  border: none;
+  line-height: 110rpx;
+  text-align: center;
+}
+
+.prc {
+  color: #f63;
+  font-size: 20px;
+}
+
+.shop_log {
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-table;
+  /*float: left;*/
+}
+
+.masking {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  background: rgba(92, 92, 92, 0.47);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.addres_list {
+  font-size: 14px;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  height: 710rpx;
+  bottom: 0;
+}
+
+.add_title {
+  padding: 0 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  background-color:#fff;
+  font-size: 12pt;
+}
+.esc{
+  width:50rpx;
+  height:50rpx;
+  float:right;
+  margin-top:14rpx;
+}
+.add_title text {
+  float: left;
+}
+
+.xq_list {
+  padding-right:0;
+  padding: 10rpx 20rpx;
+  overflow: hidden;
+  border-bottom: 1px solid #d3d3d3;
+  background-color:#fff;
+}
+
+.add_box {
+  height: 550rpx;
+  overflow: auto;
+  padding-bottom: 90rpx;
+}
+
+.add_lb {
+  line-height: 50rpx;
+  padding:20rpx 0;
+}
+
+.add_bj {
+  float: right;
+  width: 126rpx;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/bj1.png) no-repeat;
+  height: 56rpx;
+  background-size: 40%;
+  margin-top: 20rpx;
+margin-right:28rpx;
+line-height:56rpx;
+text-align:right;
+font-size:14p
+}
+
+.add_clear {
+  float: right;
+  width: 126rpx;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/sc2.png) no-repeat;
+  height: 56rpx;
+  background-size: 40%;
+  margin-top: 20rpx;
+ margin-right:10rpx;
+line-height:56rpx;
+text-align:right;
+
+}
+
+.add_lb .add_name {
+  margin-right: 200rpx;
+}
+.ico{
+width:40rpx;
+height:40rpx;
+border-radius:50%;
+border:1px solid #d3d3d3;
+float:left;
+margin-top:32rpx;
+
+}
+.state {
+  float: left;
+  line-height:40rpx;
+}
+
+.fl {
+  float: left;
+}
+
+.added {
+  width: 100%;
+  text-align: center;
+  line-height: 90rpx;
+  height: 90rpx;
+  color: #fff;
+  background-color: #f63;
+  position: fixed;
+  bottom: 0;
+}
+
+.ul {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  height: 400rpx;
+  bottom: 0;
+  overflow: scroll;
+}
+.bianji {
+  border-top: 1px solid #d3d3d3;
+  width: 100%;
+}
+
+.ul text {
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid #f2eff5;
+  line-height:80rpx;
+}
+.ullist{
+  height: 50rpx;
+  border-top: 1px solid springgreen;
+  border-bottom: 1px solid springgreen;
+}
+.coupon_list{
+  position: absolute;
+  width: 100%;
+  background-color: #f2eff5;
+  /*height: 60%;*/
+  bottom: 0;
+
+  overflow: scroll;
+}
+.coupon_list text{
+  line-height:60rpx;
+
+    display: flex;
+  flex-direction:row; 
+}
+.coupons{
+  background: #ffffff;
+  font-size: 16px;
+  border-bottom: 1px solid #d3d3d3;
+  overflow:hidden;
+  padding:0 20rpx;
+}
+.coupon_name{
+  margin-right: 10rpx;
+}
+.coupons_box{
+  float: left;
+  color:#b7b6ba;
+}
+.coupon_limit{
+font-size: 12px;
+}
+.counp_s{
+  float: right;
+position: relative;
+}
+.sta{
+  position: absolute;
+}
+.coupon_value{
+  float: right;
+  margin-right: 20rpx;
+  margin-top:33rpx;
+  color: #b7b6ba;
+  text-decoration: line-through;
+}
+.style_bac1 {
+  color: #000;
+}
+.coupon_pric1 {
+ color: #FF6633;
+text-decoration: none;
+}
+.coupon_none{
+  font-size:12pt;
+text-align:center;
+margin-top:40%;
+
+}
+.coupon_xz{
+float:right;
+margin-top:24rpx;
+height:33rpx;
+
+}
+.zx{
+  z-index: 0
+}
+wx-input div div{
+  z-index: 0;
+}
+.selected{
+color:#acacac;
+}
+
+.pop-win {
+    width: 75%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15rpx;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    top: 24%;
+}
+.sin_title{
+    font-size: 12pt;
+    text-align: center;
+    line-height: 35px;
+    color: #000;
+    padding:12rpx;
+    padding-bottom: 0;
+}
+.menu_tel{
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 90%;
+    margin: 15rpx auto;
+}
+.tel {
+    width: 90%;
+    height: 75rpx;
+    margin-left:12rpx;
+}
+.ve_code{
+  overflow: hidden;
+  padding-left: 30rpx;
+  margin: 15rpx 0;
+}
+.code{
+  width:180rpx;
+  padding-left: 20rpx;
+  height: 75rpx;
+  border-radius: 4px;
+  float: left;
+   border: 1px solid #ccc;
+}
+.code_btn{
+  width:220rpx;
+  padding: 0 15rpx;
+  color: #ff6633;
+  text-align: center;
+  line-height: 75rpx;
+  margin-left: 50rpx;
+  float: left;
+  font-size: 14px;
+  border: 1px solid #ff6633;
+  /* background-color: #1aad16; */
+  border-radius: 15rpx;
+  
+}
+.fls{
+    color: #acacac;
+    border: 1px solid #acacac;
+}
+.pop-win .action {
+    background-color: #fff;
+    padding: 30rpx 0;
+    height:80rpx;
+    margin-bottom:15rpx;
+}
+.determine {
+    display: block;
+    float: right;
+    width: 200rpx;
+    height:  75rpx;
+    border-radius: 8rpx;
+    background: #ff6633;
+    border: 1px solid #ff6633;
+    text-align: center;
+    line-height: 75rpx;
+    color: #fff;
+      margin-right: 50rpx;
+    font-size: 11pt;
+}
+.cancel {
+    display: block;
+    float: right;
+    width: 200rpx;
+    height: 75rpx;
+    border-radius: 8rpx;
+    margin-right: 60rpx;
+    text-align: center;
+    line-height:75rpx;
+    color: #696868;
+    border: 1px solid #acacac;
+    font-size: 11pt;
+}
+
+
+.coupon_lq{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    background-color:rgba(71, 71, 71, 0.63);
+    display: block;
+}
+.coupon_cent{
+  width:80%;
+position:absolute;
+top:35%;
+margin:0 auto;
+left:38%;
+margin-left:-27%;
+margin-top:-25%;
+background-color:#fff;
+
+}
+.coupon_cent .yhq{
+  text-align:center;
+  color:#000000;
+  margin-top:15rpx;
+  font-size:13pt;
+  margin-bottom:30rpx;
+}
+.coupon_box{
+    background: url("http://www.weiwoju.com/Public/wap20/delivery/image/coupon_bac.png") no-repeat center;
+    background-size:75%;
+    margin:0 auto;
+    width:80%;
+    text-align:center;
+    padding:30rpx 0;
+}
+.icon{
+    color: #FF6636;
+    font-size: 14pt;
+    margin-left: 70rpx;
+}
+.coupon_box .yh_pric{
+    font-size: 30pt;
+    font-family: Impact,"Microsoft YaHei", Verdana, Arial, sans-serif, "Times New Roman";
+    color: #FF6636;
+}
+.radio-group{
+  padding: 0 30rpx;
+}
+.cancelOrder_title{
+color:#ff6633;
+font-size:16px;
+text-align: center;
+border-bottom:2px solid #ff6633;
+line-height:80rpx;
+padding:0 20rpx;
+
+}
+.operation{
+  overflow: hidden
+}
+.operation view{
+  float: left;
+  width: 50%;
+  line-height:100rpx;
+  text-align: center;
+}
+.cancels{
+  border-right: 1px solid #f2eff5;
+width:49.5% !important;
+}
+.radio{
+  display: block;
+  border-bottom:1px solid #f2eff5;
+  line-height:110rpx;
+  font-size: 12pt;
+}

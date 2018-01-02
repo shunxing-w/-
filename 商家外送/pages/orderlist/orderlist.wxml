@@ -1,0 +1,71 @@
+<view class="main">
+<view class="shop_title">
+<text class="shop_text">{{orders.shop_name}}({{orders.address}})</text>
+<text class="order_state">{{orders.status}}</text>
+
+</view>
+<view class="oderlist" wx:for="{{goods}}" wx:key="{{item.id}}">
+    <image src="{{oss}}{{item.product_pic_url}}" ></image>
+   
+    <view class="classname"><text class="shop_name">{{item.product_name}}</text></view>
+    <view class="shop_pic">
+        <text class="pric">￥{{item.price}}</text>
+        <text class="total" >总价 <text class="fc">￥{{item.price*item.num}}</text></text>
+        <text class="num">x{{item.num}}</text>
+    </view>
+
+</view>
+<view class="box1">
+    <view class="order_total">
+        <text wx:if="{{orders.package_price>0}}">餐盒费<text class="fc">￥{{orders.package_price}}</text></text>
+        <text>配送费<text class="fc">￥{{orders.delivery_price}}</text></text>
+        <text wx:if="{{orders.coupon_value>0}}">优惠 <text class="fc">-￥{{orders.coupon_value}}</text></text>
+        <view>合计 <text class="fc">￥{{orders.price}}</text>
+    </view>
+        
+    </view>
+    <view class="statye {{ orders.coupon_value>0 ? 'st':''}}" wx:if="{{orders.status=='待确认'}}">
+        <text catchtap="Cancel_order" data-no="{{orders.no}}">取消订单</text>
+    </view>
+    <view wx:if="{{orders.status=='待支付'}}" class="statye {{ orders.coupon_value>0 ? 'st':''}}">
+        <text catchtap="getPayInfo" data-no="{{orders.no}}">去支付</text>
+        <text catchtap="Cancel_order" data-no="{{orders.no}}">取消订单</text>
+    </view>
+</view>
+<view class="box2"> 
+        <view><text>订单编号</text><text>{{orders.no}}</text></view>
+        <view><text>下单时间</text><text>{{orders.create_time}}</text></view>
+        <view><text>支付状态</text><text>{{orders.pay_status}}</text></view>
+        <view><text>支付方式</text><text>{{orders.pay_method}}</text></view>
+        <view><text>联系方式</text> 
+        <view class="classname" catchtap="call" style="float:right">
+        <image class="tel" src="http://www.weiwoju.com/Public/wap/dinner2/image/tell.png"></image>
+        <text style="color: #0093d7;line-height:63rpx;" >{{tel}}</text>
+        </view>
+        
+        </view>
+</view>
+<view class="remarks"><text>备注:</text><text>{{orders.remark}}</text></view>
+
+<view class="added">
+    <view class="jx_order" catchtap="jx_order">继续点单</view>
+    <view class="fh_order"  catchtap="returned">返回列表</view>
+    </view>
+</view>
+<view wx:if="{{coupon}}" class="coupon" catchtap="coupons">
+<image class="coupon_img" src="../images/coupon.png"></image>
+</view>
+
+<view class="coupon_lq" catchtap="coupon_hid" hidden="{{hid}}">
+<view class="coupon_cent" catchtap="coupons">
+<view class="yhq">{{coupon.name}}</view>
+
+       <view class="coupon_box">
+       <text class="coupon_limit">满{{coupon.use_limit}}元使用</text>
+       <text class="icon">￥</text>
+       <text class="yh_pric">{{coupon.price}}</text>
+       <text class="yhq_name">优惠券</text></view>
+      <text class="receive" catchtap="receive" data-card_id="{{coupon.wxcard_id}}" data-id="{{coupon.id}}" data-no="{{orders.no}}">领取</text>
+      </view>
+</view>
+<loading hidden="{{hidden}}">加载中…</loading>

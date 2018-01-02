@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Order/order",
+    "pages/address/address",
+    "pages/addressEdit/addressEdit",
+    "pages/orders/orders",
+    "pages/orderlist/orderlist"
+  ],
+  "window": {
+    "navigationBarBackgroundColor":"#ff6633",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fbf9fe"
+  }
+}

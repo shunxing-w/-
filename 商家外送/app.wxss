@@ -1,0 +1,31 @@
+/**app.wxss**/
+page{height:100% ;font-family: "微软雅黑"; -webkit-overflow-scrolling: touch;
+/*background-color:#f0eff5;*/
+}
+.container {
+  position:relative;
+
+	z-index: 999;
+  height: 92%;
+  box-sizing: border-box;
+  /*background-color: #f4f4f4;*/
+}
+
+.flex-wrap{
+	display: flex;
+}
+.flex-item{
+	flex: 1;
+}
+.flex-wrap.flex-direction-col{
+	flex-direction: column;
+}
+.flex-wrap.flex-direction-row{
+	flex-direction: row;
+}
+::-webkit-scrollbar
+{
+    width: 0px;
+    height: 0px;
+	color: transparent;
+}

@@ -1,0 +1,32 @@
+<!--pages/address/address.wxml-->
+<view class="main">
+
+<form bindsubmit="formSubmit">
+<view class="add_li" name>
+    <text class="fl">联系人：</text>
+    <view class="fl box"><input  name="name" type="text" placeholder="姓名"  focus="true" /></view>
+</view>
+
+<view class="add_li"><text class="fl">性别：</text>
+    <radio-group name="sex" class="fl">
+      <label><radio  value="0" checked='true' />男</label>
+      <label><radio  value="1" />女</label>
+    </radio-group>
+</view>
+<view class="add_li"><text class="fl">手机号码：</text>
+    <view class="fl box"><input bindinput="tel" maxlength='11' name="dh" type="number" placeholder="联系电话(必填)" /></view>
+    <!--<text class="mt">{{yztel}}</text>-->
+</view>
+<view class="add_li"><text class="fl">收货地址：</text>
+    <view  class="fl box">
+     <input name="dz1" placeholder="选择收货地址" bindfocus="address_map" value="{{address}}" type="text" />
+    </view>
+</view>
+<view class="add_li"><text class="fl">详细地址：</text>
+    <view  class="fl box">
+     <input name="dz2" placeholder="楼号/门牌号"   type="text" />
+    </view>
+</view>
+<view class="btn" ><button type="primary" formType="submit">保存</button></view>
+</form>
+</view>
