@@ -1,0 +1,123 @@
+<!--index.wxml-->
+<view wx:if="{{stae==false}}">
+  <text class="prompt">无法获取地址，请打开定位权限，然后下拉刷新</text>
+  <button class="achieve" catchtap="achieve">点击尝试获取地址</button>
+</view>
+<view class="main" wx:if="{{stae==true}}">
+<!--菜单页面-->  
+
+<view  class="container flex-wrap flex-direction-row">
+	<!-- left aside -->
+  
+<scroll-view class="scroll" scroll-y="true">
+	<view class="aside  flex-direction-col ">
+		<block wx:for="{{navList}}" wx:key="{{item.id}}">
+			<view class="type-nav {{curNav == item.id ? 'selected' : ''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">{{item.name}} <text wx:if="{{item.cate_num>0}}" class="cate_num">{{item.cate_num}}</text></view>
+      
+		</block>
+	</view>
+  </scroll-view>
+	<!-- content -->
+<scroll-view class="scroll2" scroll-y="true" >
+	<view class="content flex-item">
+		<block wx:for="{{dishesList}}" wx:key="{{item.id}}"> 
+			<view class="navList" wx:if="{{index==0}}" id="cate{{item.u_cate_id}}"> {{item.category_name}}</view>
+			<view class="dish flex-wrap flex-direction-row"  data-dish="{{item.id}}"  data-index="{{index}}">
+<image style="width: 80px; height: 80px;" data-index="{{index}}" mode="{{item.mode}}" src="{{oss+item.prudent_pic_url}}"></image>
+				<view class="flex-item" data-index="{{index}}">
+					<text class="title" data-index="{{index}}">{{item.name}}</text>
+					<text class="pric" data-index="{{index}}">￥{{item.price}}</text>
+				</view>
+				<text class="MoSales" data-index="{{index}}">月售{{item.sale_sum}}</text>
+				<block wx:if="{{item.spec == 0}}">
+					<view class="add-btn" id="{{item.id}}">
+					<!--{{item.num}}-->
+							<view class="jia"  data-shop="{{item}}" data-index="{{index}}" catchtap="selectDish"></view>
+						<view class="num" wx:if="{{item.num > 0}}">{{item.num}}</view>
+						<view class="jian"wx:if="{{item.num>0}}" data-shop="{{item}}" data-index="{{index}}" catchtap="reduction"></view>
+					</view>
+        </block>
+  <block wx:if="{{item.spec != 0}}">
+		<view class="spec_bx">
+      <view class="spec" data-shop="{{item}}" catchtap="spec" >选规格 
+				<text class="spec_num" wx:if="{{item.style_num>0}}" catchtap="spec">{{item.style_num}}</text>
+      </view>
+    </view>
+  </block>
+			</view>
+		</block>
+
+	</view>
+</scroll-view>
+</view>
+<view class="foder">
+<text class="shop-server">我的订单</text>
+ <text class="settlement {{qjs}}" catchtap="Myorder" data-total="{{total}}" >{{enable.text}}</text> 
+ <view class="total-price">￥<text class="prcnum">{{total}}</text><text class="psf">\n另需配送费{{delivery_price}}元</text><a href="javascript:;" class="shop-gwc" catchtap="greet" ><i wx:if="{{shopcar_num>0}}" id="car_num">{{shopcar_num}}</i></a></view>
+</view>
+ <!--规格弹窗-->
+    <view class="mt_view" wx:if="{{spec_current}}"  catchtap="gwc_close"  data-name="1" style="display:{{sedpn}}"id="mt_view">
+        <view class="mt_spec" id="spid2" catchtap="spec" data-shop="1">
+            <i class="close" catchtap="close" >x</i>
+            <p class="spec_title" >{{spec_current.name}}</p>
+            <p style="margin-left: 10px;font-size:16px;">规格：</p>
+            <view class="spec_xz">
+                <text wx:for="{{spec_current.prostyle}}" wx:key="{{index}}" class="{{spec_current.style_id == item.style_id ? 'ys' : ''}}" data-style="{{item}}" data-specid="{{spec_current.id}}" data-styleid="{{spec_current.style_id}}" catchtap="set_spec" >{{item.style_name}}</text>
+            </view>
+            <view class="spec_prc">
+                <view class="price">¥{{spec_current.price}}<text class="price_name">({{spec_current.style_name}})</text><text class="spec_text"></text></view>
+                <view class="add-icon">
+				<view class="jia" data-current="{{spec_current}}" catchtap="spec_plus" ></view>
+                    <view  class="num" wx:if="{{spec_current.num}}">{{spec_current.num}}</view>
+        <view class="jian" data-current="{{spec_current}}" catchtap="spec_minuse" wx:if="{{spec_current.num}}"></view>  
+                </view>
+            </view>
+        </view>
+    </view>
+
+<!--购物车弹窗-->
+
+    <view class="masking" id="masking"  catchtap="gwc_close" style="display:{{greet}}">
+        <view class="shop_gwc" catchtap="greet">
+            <view class="shop_gwc-title">
+			<text class="gwc-t">购物车</text>
+			<text class="gwc-q" catchtap="clearCar">清空购物车</text>
+			</view>
+            <view id="gwc_text">
+                <view wx:for="{{shopcar}}" wx:key="{{item.id}}" >
+					<view class="gwc-list" wx:if="{{item.num}}">
+						<text v-cloak class="gwc_shopname">{{item.name}}</text>
+						<text wx:if="{{item.style_id}}" class="shop_style" >{{item.style_name}}</text>
+						<text class="prc"><text>{{item.price}}元</text></text>
+						<view class="add-icon">
+						
+							<view class="jia" data-good="{{item}}" catchtap="gwc_plus"></view>
+						     <view  class="num" wx:if="{{item.num}}">{{item.num}}</view>
+							<view class="jian" data-good="{{item}}" catchtap="gwc_minuse" wx:if="{{item.num}}"></view>
+						
+						</view>
+					</view>
+                </view>
+                <view class="package" wx:if="{{package_total}}" >餐盒费：{{package_total}}元</view>
+            </view>
+        
+
+
+
+    </view>
+</view>
+<!--<view>
+<view catchtap="search" class="search" style=" display:{{dpn}};">
+<icon type="search" size="18"></icon><text>搜索</text>
+</view>
+</view>-->
+
+
+</view>
+<loading hidden="{{hidden}}">加载中…</loading>
+
+
+
+ 
+  
+

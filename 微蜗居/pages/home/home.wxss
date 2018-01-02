@@ -1,0 +1,244 @@
+.main{
+    font-size: 16px;
+    padding: 0 10rpx;
+    padding-top:14rpx;
+}
+.prompt{
+  text-align: center;
+  padding-top:50%;
+}
+.search{
+width:90%;
+border:1px solid #acacac;
+border-radius:12rpx;
+height:40rpx;
+margin:0 auto;
+text-align: center;
+font-size: 12px;
+color: #acacac;
+line-height: 40rpx;
+padding: 10rpx 0;
+}
+.shop{
+  position: relative;
+    padding: 15rpx 20rpx;
+    overflow: hidden;
+    border-bottom: 1px solid #f3f0f0;
+}
+.icons{
+    font-size: 10px;
+display: inline-table;
+}
+.shop_img{
+    float: left;
+    width: 150rpx;
+    height: 150rpx;
+    margin-top:20rpx; 
+}
+.shop_conte {
+    line-height: 43rpx;
+    margin-left: 20rpx;
+    float: left;
+}
+.shop_conte text{
+    /*color: #656565;*/
+    display: flex;
+    line-height:40rpx;
+}
+.delivery{
+   float: left;
+     color: #656565;
+    font-size: 12px;
+}
+.shop_cost{
+    color: #656565;
+    font-size: 12px;
+}
+.shop_address{
+    color: #656565;    
+    font-size: 12px;
+}
+.shop_name{
+    line-height:50rpx;
+}
+.shop_tel{
+    color: #656565;    
+    font-size: 12px;
+    margin-left:34rpx;
+}
+.discount{
+  font-size: 12px;
+  color:#656565;
+}
+.jian{
+  width:30rpx;
+  height:30rpx;
+  float:left;
+  color:#fff;
+  background-color:#ff6633;
+  text-align:center;
+  
+  margin-top:6rpx;
+  margin-right:6rpx;
+}
+.mian{
+  width:30rpx;
+  height:30rpx;
+  float:left;
+  color:#fff;
+  background-color:#FF0000;
+  text-align:center;
+  
+  margin-top:6rpx;
+  margin-right:6rpx;
+}
+::-webkit-scrollbar
+{
+    display: none;
+    width: 0px;
+    height: 0px;
+	color: transparent;
+}
+.distance{
+    float: right;
+    height: 180rpx;
+    text-align: center;
+   font-size: 10pt;
+   color: #FF6636; 
+}
+.add_img{
+    margin-top: 50rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+.tel{
+    width: 26rpx;
+    float: left;
+    height: 26rpx;
+    margin-top:10rpx;
+}
+.orderlist{
+    position:fixed;
+    bottom:25rpx;
+    right:41rpx;
+    z-index:100;
+}
+.order_img{
+    width:120rpx;
+    height:120rpx;
+}
+
+.coupon_lq{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    background-color:rgba(71, 71, 71, 0.63);
+    display: block;
+}
+.coupon_cent{
+    width: 80%;
+    position: absolute;
+    top: 35%;
+    margin: 0 auto;
+    left: 38%;
+    margin-left: -25%;
+    margin-top: -25%;
+    background-color: #FFFFFF;
+    height: 370rpx;
+}
+.coupon_cent .yhq{
+    text-align: center;
+    color: #FF6636;
+    margin-top: 2.4rpx;
+}
+.coupon_box{
+    background: url("http://www.weiwoju.com/Public/wap20/delivery/image/coupon_bac.png") no-repeat center;
+    background-size:80%;
+    margin:0 auto;
+    width:80%;
+    text-align:center;
+    padding:30rpx 0;
+}
+.icon{
+    color: #FF6636;
+    font-size: 14pt;margin-left: 1rem;
+}
+.coupon_box .yh_pric{
+    font-size: 32pt;
+    font-family: Impact;
+    color: #FF6636;
+}
+.coupon_box span:nth-child(3){
+    font-size: 14pt;
+    font-family: Impact;
+    display: block;
+    float: right;
+    width: 4rem;
+    height: 2rem;
+    text-align: left;
+    color: #FF6636;
+}
+.receive {
+   display:block;
+  margin:0 auto;
+  width:80%;
+  margin-top:35rpx;
+  text-decoration:none;
+  color:#fff;
+  font-size:12pt;
+  background:#FF6636;
+  height:75rpx;
+  line-height:75rpx;
+  text-align:center;
+}
+.delete{
+ position:absolute;
+bottom:86rpx;
+right:10rpx;  
+}
+
+.item{
+   position:relative;
+  height:158rpx;
+  line-height:141rpx;
+  overflow:hidden;   
+}
+.inner{
+  overflow:hidden;
+    position: absolute;
+    top:0;
+}
+.inner.txt{
+    background-color: #fff;
+    width: 100%;
+    z-index: 5;
+    padding:0 10rpx;
+    transition: left 0.2s ease-in-out;
+    left:0px;
+}
+.inner.del{
+    background-color: #e64340;
+    width: 160rpx;text-align: center;
+    z-index: 4;
+    right: 0;
+    color: #fff;
+    margin-top:22rpx;
+}
+.prompt{
+  /*margin-top:400rpx;*/
+display:block;
+text-align:center;
+
+}
+.achieve{
+margin-top:80rpx;
+width:350rpx;
+font-size:14px;
+background-color:#ff6633;
+color:#fff;
+border-radius:2px;
+
+
+}

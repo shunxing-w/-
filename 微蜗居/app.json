@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/Order/order",
+    "pages/address/address",
+    "pages/addressEdit/addressEdit",
+    "pages/orders/orders",
+    "pages/orderlist/orderlist"
+  ],
+  "window": {
+    "navigationBarBackgroundColor":"#ff6633",
+    "navigationBarTitleText": "商家外送",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fbf9fe"
+  }
+}

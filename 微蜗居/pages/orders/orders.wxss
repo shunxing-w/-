@@ -1,0 +1,74 @@
+.main{
+    width: 750rpx;
+    height: 100%;
+}
+.tab{
+    overflow: hidden;
+    position:fixed;
+    background-color:#fff;
+}
+.tab text{
+    text-align: center;
+    line-height: 85rpx;
+    display: block;
+    width: 150rpx;
+    height: 85rpx;
+    font-size: 14px;
+    float: left;
+}
+.liboder {
+    border-bottom: 2px solid #ffaf04;
+    color: #ff690a;
+}
+.order_list{
+    overflow:hidden; 
+    padding: 20rpx 10rpx;
+   border-bottom:1px solid #d3d3d3;
+}
+.order_cen{
+    overflow: hidden;
+    float: left;
+}
+.order_shop{
+    float: left;
+    width: 150rpx;
+    height: 150rpx;
+    margin-right: 20rpx;
+}
+.order_text{
+    line-height:24px;
+    float: left;
+   color: #a8a8a8;
+}
+.order_shopname{
+        display: block;
+    font-size: 14px;
+    overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.order_time{
+    display: block;
+    width:450rpx;
+    font-size: 14px;
+    
+}
+.order_shoppric{
+    color: #ff6633;
+    display: block;
+    width: 120rpx;
+    font-size: 14px;
+}
+.order_state{
+    float: right;
+    display: block;
+    width: 111rpx;
+    margin-top: 50rpx;
+    font-size: 14px;
+    color: #80c770;
+}
+.no_order{
+  text-align:center;
+  font-size:12pt;
+  line-height:400rpx;
+}

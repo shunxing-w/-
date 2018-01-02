@@ -1,0 +1,28 @@
+<view class="main">
+  <view class="tab">
+    <text wx:for="{{ order_state}}" class="{{state == item.id ? 'liboder' : ''}}" data-state="{{item.state}}" catchtap='state_tab'>{{item.state}}</text>
+  </view>
+  <view style="padding-top:70rpx">
+     <!--全部订单-->
+    <block wx:if="{{order!=''}}" id="whole"  class="order">
+   
+        <view wx:for="{{order}}" class="order_list" wx:key="{{item.id}}"  data-id="{{item.id}}" catchtap="returned">
+            
+                <view class="order_cen">
+                    <image src="{{item.shoplogo_url}}" class="order_shop"/>
+                    <view class="order_text">
+                        <text class="order_shopname">{{item.shop_name}}</text>
+                        <text class="order_time">下单时间{{item.create_time}}</text>
+                        <text class="order_shoppric">￥{{item.price}}</text>
+                     </view>
+                </view>
+                <text class="order_state">{{item.status}}</text>
+        </view>
+    </block>
+    <block wx:else>
+     <view class="no_order">暂无当前订单 </view>
+    </block>
+  </view>
+
+</view>
+  <loading hidden="{{hidden}}"></loading>

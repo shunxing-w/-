@@ -1,0 +1,51 @@
+<!--pages/home/home.wxml-->
+<view class="main">
+<!--<view class="search"><icon type="search" size="16" color="rgb(172,172,172)"/>搜索商家</view>-->
+<view class="prompt" wx:if="{{errcode==1}}" >附近暂无商家提供外送</view>
+<view wx:if="{{errcode==14}}">
+<text class="prompt">无法获取地址，请打开定位权限，然后下拉刷新</text>
+<button class="achieve" catchtap="achieve">点击尝试获取地址</button>
+</view>
+  <block wx:if="{{errcode!=1&&distance==true}}">
+    <view wx:for="{{shop}}" wx:key="{{item.id}}" class="shop item">
+    <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" class="inner txt" data-id="{{item.id}}" data-name="{{item.shop_name}}" catchtap="shop_index">
+      <image data-index="{{index}}"class="shop_img" src="{{oss}}{{item.shoplogo_url}}"></image>
+      <view data-index="{{index}}" class="shop_conte">
+        <text data-index="{{index}}" class="shop_name" style="line-height:60rpx">{{item.shop_name}}</text>
+        <text data-index="{{index}}" class="shop_cost">起送￥{{item.delivery_limit}} <text class="icons" style="display: inline-table;">|</text> 配送￥{{item.delivery_price}}</text>
+        <view wx:if="{{item.full_subtract}}" class="discount"><text class="jian" style="display:block;line-height:30rpx;">减</text><text>{{item.full_subtract}}</text></view>
+        <view class="discount" wx:if="{{item.delivery_free_price>0}}"><text class="mian" style="display:block;line-height:30rpx;">免</text><text class="" >满￥{{item.delivery_free_price}} 免配送费</text></view>
+        <text data-index="{{index}}" class="shop_address">{{item.address}}</text>
+        <image class="tel" src="http://www.weiwoju.com/Public/wap/dinner2/image/tell.png"></image>
+        <text class="shop_tel">{{item.tel}}</text>
+      </view>
+      <!--<view wx:if="{{item.distance}}" class="distance">
+        <image class="add_img" src="../images/dzm1.png"></image>
+        <text>\n{{item.distance}}</text>
+      </view>-->
+    </view>
+    <view class="inner del" data-index="{{index}}" data-id="{{item.id}}" bindtap ="delItem" hidden="{{del_hid}}">取消关注</view>
+    </view>
+  </block>
+
+  <block wx:if="{{errcode!=1&&distance==false}}">
+    <view wx:for="{{shop}}" wx:key="{{item.id}}" class="shop" data-id="{{item.id}}" data-name="{{item.shop_name}}" catchtap="shop_index">
+      <image class="shop_img" src="{{oss}}{{item.shoplogo_url}}"></image>
+      <view class="shop_conte">
+        <text class="shop_name" style="line-height:60rpx">{{item.shop_name}}</text>
+        <text class="shop_cost">起送￥{{item.delivery_limit}} <text class="icons" style="display: inline-table;">|</text> 配送￥{{item.delivery_price}}</text>
+        <text class="shop_address">{{item.address}}</text>
+        <image class="tel" src="http://www.weiwoju.com/Public/wap/dinner2/image/tell.png"></image>
+        <text class="shop_tel">{{item.tel}}</text>
+      </view>
+      <view wx:if="{{item.distance}}" class="distance">
+        <image class="add_img" src="../images/dzm1.png"></image>
+        <text>\n{{item.distance}}</text>
+      </view>
+    </view>
+  </block>
+  <view class="orderlist" catchtap="orders">
+    <image class="order_img" src="../images/orderlist.png"></image>
+  </view>
+  <loading hidden="{{hidden}}">加载中…</loading>
+</view>

@@ -1,0 +1,133 @@
+<!--index.wxml-->
+<view class="main">
+    
+    <block wx:if="{{address.id}}">
+      <view class="address" catchtap="show_add" data-id="{{address.id}}">
+       <image class="add_img" src="../images/adds.png" ></image>
+        <view class="add" >
+            <text class="address_lxr">收货人：{{address.name}}        <text>{{address.tel}}</text></text>
+            <view class="address_xq"><text style="display:block;float:left">收货地址：</text> <text class="addres_text">{{address.address}}</text></view>
+        </view>
+        <view class="address_time">送餐时间：<text class="add_tex">立即送出(大约{{delivery_pre_time}}分钟)</text>
+        </view>
+        </view>
+    </block>
+    <block wx:else>
+      <view class="address" catchtap="returned" data-id="{{address.id}}">
+        <text class="address_lxr">您还未添加地址</text>
+        <text class="address_xq">去添加</text>       
+        </view>
+    </block>
+<view class="border"></view>
+    <view class="coupon">
+        <view class="box1 pay">
+        <text class="fl">支付方式</text> <text class="fr">在线支付</text>
+        </view>
+        <view class="box2 counp" catchtap="coupon_tap">
+        <text class="fl">抵用券/优惠券</text>
+        <text class="fr yhq">{{coupon_text}}</text>
+        </view>
+    </view>
+    <view class="coupon">
+         <view class="box1 counp" >
+         <picker mode="selector" bindchange="bindPickerChange" value="{{index}}"range="{{array}}">
+    <view class="picker">
+     就餐人数 <text wx:if="{{index}}" class="eat_num">{{array[index]}}</text> 
+        <text class="eat_num" wx:else>便于商家提供餐具</text>
+    </view>
+  </picker>
+          </view>
+          
+         <view class="box2 bz"><text class="fl">备注</text> 
+        
+          <input class="frs" hidden="{{inp_n}}" placeholder="备注" focus="{{inp_fo}}" placeholder-class="zx" bindblur="remarks"/>
+          <text class="frs" style="float:right;width:500rpx;color:#888;" catchtap="input_text" hidden="{{rema_n}}">{{remarks}}</text>
+          </view>
+    </view>
+    <view class="content">
+        <view class="shoplog">
+            <image src="{{shop_url}}" class="shop_log"></image> {{shop_name}}
+        </view> 
+        <view class="w">
+        <view class="content_shopcar"  wx:for="{{menu}}" wx:key="{{item.id}}" wx:if="{{item.num>0}}">
+            <text class="shop_name">{{item.name}}</text> <text class="shop_style">{{item.style_name}}</text>
+            <view class="shop_pric"><text class="shop_num">x{{item.num}}</text>￥{{item.price*item.num}}</view>
+        </view>
+        </view>
+          <view class="box1 chf"><text class="fl">餐盒费</text><text class="fr">￥{{package_total}}</text></view>
+          
+          <view class="box1"><text class="fl ">配送费</text><text class="fr deli">￥{{delivery_price}}</text></view>
+          <view class="box1" wx:if="{{coupon.coupon_value>0}}"><text class="fl">优惠券</text><text class="fr ">{{coupon_text}}</text></view>
+          <view wx:if="{{Discount>0}}" class="box1 chf"><text class="fl">满减优惠</text><text class="fr">-￥{{Discount}}</text></view>
+          <view class="box1">总计<text class="tota_prc">￥{{total}}</text></view>
+    </view>
+       </view>
+    <view class="porder">
+    <text class="total">待支付:<text class="prc">￥{{total}}</text> </text>
+    <text  class="pl_order" catchtap="place_order">提交订单</text>
+    <view class="section">
+  
+</view>
+
+<!--<loading hidden="{{hidden}}">玩命加载中…</loading>-->
+<view>
+<view class="masking" style="display:{{add}}" catchtap="hidde">
+    <view class="addres_list" catchtap="show_add2">
+        <view class="add_title">我的收货地址 <image class="esc" src="../images/esc.png" catchtap="hidde"></image></view>
+        <view class="add_box">
+         
+      <view class="xq_list {{item.status=='unabled' ? 'selected' : ''}}" wx:for="{{address_list}}"  wx:key="{{item.id}}" data-add_id="{{item.id}}" data-status="{{item.status}}" catchtap="add_address">
+   
+                <view class="add_lb">
+                    <text class="add_name">{{item.name}}</text>  <text class="add_dh">{{item.tel}}\n</text>
+                    <text class="add_dz">{{item.address}}</text>
+                </view> 
+                 <view class="bianji">
+                 <view class="ico">
+                    <icon wx:if="{{item.id==address.id}}" class="state" type="success_no_circle" size="20"></icon>
+                 </view>
+                 <text >使用此地址</text>
+                    <view class="add_clear" catchtap="clear_address" data-id="{{item.id}}">删除</view> 
+                    <view class="add_bj" catchtap="bj_address" data-address="{{item}}">编辑</view>
+                 </view>
+         
+            </view>
+        </view>
+             <view class="added" catchtap="returned">新增收货地址</view>
+        </view>
+       
+</view>
+<view class="masking" catchtap="eat_hild" hidden="{{cou_hid}}">
+  <view animation="{{animation}}" class="coupon_list">
+  <block wx:if="{{customer_coupon}}">
+    <view class="coupons"  wx:for="{{customer_coupon}}" catchtap="use_coupons" data-coupon="{{item}}">
+  <view class="coupons_box {{totals>item.coupon_use_limit ? 'style_bac1' : ''}}">
+    <text class="coupon_name">{{item.coupon_name}}\n</text>
+    <text class="coupon_limit">满{{item.coupon_use_limit}}元使用</text>
+  </view>
+  <view >
+    <!--<text class="sta">已选择\n</text>-->
+    <icon wx:if="{{coupon.id==item.id}}"  class="coupon_xz" type="success_no_circle" size="20"></icon>
+    <text class="coupon_value {{totals>item.coupon_use_limit ? 'coupon_pric1':''}} ">￥{{item.coupon_value}}</text>
+   
+  </view>
+  </view>
+  </block>
+  <block wx:else>
+  <view class="coupon_none">暂无优惠券</view>
+  </block>
+</view>
+</view>
+
+<loading hidden="{{hidden}}">加载中…</loading>
+
+</view>
+
+
+</view>
+
+
+
+ 
+  
+

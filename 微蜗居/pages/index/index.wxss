@@ -1,0 +1,879 @@
+.main {
+  height: 99%;
+  background-color:#ffffff;
+}
+
+page {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'PingFang SC','Helvetica Neue', Helvetica,'Droid Sans Fallback','Microsoft Yahei',sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+.page-bottom {
+  height: 100%;
+  width: 750rpx;
+  position: fixed;
+  background: url(http://www.weiwoju.com/Public/wap/dinner2/image/bac.jpg) no-repeat;
+  background-size: 100%;
+  z-index: 0;
+}
+.fenl{
+  background:#ecebf1;
+  font-size:10pt;
+  color:#545454;
+  height:50rpx;
+  line-height:50rpx;
+}
+.wc {
+  color: white;
+  padding: 30rpx 0 30rpx 40rpx;
+}
+
+.page-content {
+  padding-top: 300rpx;
+}
+
+.page-top {
+  height: 100%;
+  position: fixed;
+  width: 750rpx;
+  background-color: #fff;
+  z-index: 0;
+  transition: All 0.4s ease;
+  -webkit-transition: All 0.4s ease;
+}
+
+/*.page-top image{
+  position: absolute;
+  width: 68rpx;
+  height: 38rpx;
+  left: 20rpx;
+  top: 20rpx;
+}*/
+
+.c-state1 {
+  transform: rotate(0deg) scale(0.9) translate(65%, 0%);
+  -webkit-transform: rotate(0deg) scale(0.9) translate(65%, 0%);
+}
+
+.c-state2 {
+  transform: rotate(0deg) scale(0.8) translate(75%, 0%);
+  -webkit-transform: rotate(0deg) scale(0.8) translate(75%, 0%);
+}
+
+.mb {
+  width: 100%;
+  height: 100%;
+  float: left;
+  /*background-color: yellow;*/
+  overflow: hidden;
+}
+
+.search {
+  margin: 0 auto;
+  margin-bottom: 5px;
+  width: 90%;
+  height: 48rpx;
+  border: 1px solid white;
+  border-radius: 2em;
+  text-align: center;
+  color: white;
+  font-size: 28rpx;
+  margin-top:-70rpx;
+}
+
+.search2 {
+  float: left;
+  margin-left: 40rpx;
+  margin-bottom: 5px;
+  width: 75%;
+  height: 48rpx;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  text-align: left;
+  color: white;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.qx {
+  float: right;
+  color: white;
+  font-size: 0.9rem;
+  line-height: 30px;
+  margin-right: 20px;
+}
+
+.search2 icon {
+  float: left;
+  margin: 2px 5px;
+}
+
+.seinput {
+  float: left;
+  width: 499rpx;
+  line-height: 26px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.scroll {
+  height: 100%;
+  width: 23%;
+  background-color: #ecebf1;
+}
+
+.scroll2 {
+  height: 100%;
+  width: 79%;
+}
+
+.scroll3 {
+  height: 100%;
+  width: 100%;
+}
+
+.aside {
+  height: 100%;
+  width: 100%;
+  /*border-right: 1px solid #ddd;*/
+  font-size: 0.85rem;
+}
+
+.type-nav {
+  font-size: 14px;
+  color: black;
+  position: relative;
+  padding: 26rpx 9px;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  z-index: 10;
+  flex-direction:row;
+  display: block;
+}
+
+.cate_num{
+  position:absolute;
+  width:30rpx;
+  height:30rpx;
+  border-radius:50%;
+  color:#ffffff;
+  background-color:#ff6633;
+  line-height:35rpx;
+  text-align:center;
+  right:0;
+  top:3rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+}
+.type-nav.selected {
+  background-color: #fff;
+  color: #ff6638;
+}
+.navList{
+font-size:14px;
+background:#ecebf1;
+color:#7c7c7c;
+padding:5rpx 18rpx;
+}
+.content {
+  /*background-color: #fff;*/
+}
+.dish {
+  padding: 30rpx 10rpx;
+  border-bottom: 2px solid #f3f0f0;
+  position: relative;
+}
+.dish image {
+  margin-right: 13px;
+  margin-left:12rpx;
+}
+.dish .title {
+ color:#2f2f2f;
+  display:block;
+  font-size:15px;
+  margin-top:20rpx;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-bottom:24rpx;
+}
+.dish .pric {
+  color: #f63;
+  font-size: 16px;
+  margin-left: -5rpx;
+}
+
+.dish .MoSales {
+  margin-top: 10px;
+  display: block;
+  font-size: 12px;
+  color: #545454;
+  height: 20rpx;
+  float: right;
+  position: absolute;
+  right: 35rpx;
+}
+.dish .add-btn {
+  position: relative;
+  width: 90px;
+  text-align: right;
+  height: 74rpx;
+  top: 42px;
+  right: 3px;
+  line-height: 74rpx;
+}
+
+.add-btn view {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  margin-top: 19rpx;
+  float: right;
+}
+
+.spec_bx {
+  width: 136rpx;
+  height: 50rpx;
+  position: absolute;
+  font-size: 12px;
+  right: 0;
+  top: 145rpx;
+  text-align: right;
+  margin-right: 15rpx;
+}
+
+.ys {
+  color: #f44336;
+}
+
+.spec {
+  background-color: #f63;
+  border: 1px solid #ff9832;
+  color: #fff;
+  border-radius: 10px;
+  padding: 4px 0;
+  position: relative;
+  text-align: center;
+}
+
+.anim {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 3.5rem;
+  background-color: rgb(119, 115, 112);
+  top: 2rem;
+  border-radius: 10px;
+  display: hidden;
+}
+
+.jian {
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/shop_jian.png) no-repeat;
+  background-size: 100%;
+  /*margin-right: 49rpx;*/
+}
+
+.jia {
+  z-index: 999;
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/shop_jia.png) no-repeat;
+  background-size: 100%;
+}
+
+.dish .add-btn .num {
+  /*position:absolute;*/
+  height: 60rpx;
+  width: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  /*line-height:47px;
+bottom:0.3rem;
+left:66rpx;
+	*/
+}
+
+.foder {
+  width: 100%;
+  height: 9%;
+  position: fixed;
+  /*border-top: 1px solid #d3d3d3 ;*/
+  bottom: 0rem;
+  background-color: #fff;
+   z-index:99999999;
+}
+
+.shop-server {
+  position: absolute;
+  width: 2.2rem;
+  display: none;
+  height: 2.2rem;
+  background: #242322;
+  z-index: 9;
+  left: 7rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.2rem;
+  padding: 0.26rem;
+  box-sizing: border-box;
+  color: #fff;
+  border: 1px solid #fff;
+  text-decoration: none;
+}
+
+.shop-gwc {
+ position:absolute;
+bottom:50rpx;
+width:110rpx;
+height:110rpx;
+background:url(https://www.weiwoju.com/Public/wap20/delivery/image/shopcar2.png) no-repeat #b1b1b1 center center;
+border-radius:50%;
+background-size:100% auto;
+z-index:9;
+left:-146rpx;
+border:1px solid #fff;
+box-sizing:border-box;
+
+}
+
+.shop-gwc i {
+  position: absolute;
+  text-indent: 0;
+  top: 0rpx;
+  right: -5rpx;
+  line-height: 35rpx;
+  font-size: 12px;
+  border: 1px solid #fff;
+  text-align: center;
+  background:#ff6633;
+  border-radius: 19.98rem;
+  width: 35rpx;
+  height: 35rpx;
+  color: #fff;
+}
+
+.settlement {
+  width:230rpx;
+height:100%;
+display:block;
+float:right;
+z-index:9;
+font-family:"Microsoft YaHei", Verdana, Arial, sans-serif, "Times New Roman", 宋体;
+line-height:110rpx;
+font-size:16px;
+text-align:center;
+box-sizing:border-box;
+text-decoration:none;
+background-color:#acacac;
+color:#fff;
+padding:0 40rpx;
+
+}
+
+.total-price {
+position:absolute;
+width:138px;
+font-size:18pt;
+right:160rpx;
+height:63px;
+color:#ff6638;
+margin-right:120rpx;
+line-height:47rpx;
+box-sizing:border-box;
+z-index:8;
+text-align:left;
+padding-top:10rpx;
+}
+
+.foder .psf {
+  color:#2f2f2f;
+font-size:12px;
+display:inline-flex;
+line-height:1rpx;
+margin-left:14rpx;
+
+}
+
+.prcnum {
+  color: #ff6638;
+  padding-right: 20px;
+}
+
+/*规格弹窗*/
+
+.mt_view {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(88, 87, 87, 0.42);
+  height: 100%;
+  top: 0;
+  z-index: 100001;
+  display: none;
+}
+
+.mt_spec {
+  width: 80%;
+  /* height: 100%; */
+  overflow: hidden;
+  /* z-index: 999; */
+  background-color: whitesmoke;
+  position: fixed;
+  /* padding-left: 40px; */
+  top: 27%;
+  left: 11%;
+  border-radius: 5px;
+  padding-bottom: 80px;
+}
+
+.mt_spec view {
+  overflow: hidden;
+}
+
+.close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  cursor: hand;
+  font-size: 24px;
+  color: #ccc;
+}
+
+.spec_title {
+  margin-top: 12px;
+  text-align: center;
+  width: 100%;
+  font-weight: 900;
+  display: block;
+  font-size: 14px;
+}
+
+.spec_xz {
+  padding: 0 60rpx;
+  margin-bottom: 20rpx;
+}
+
+.spec_xz text {
+  padding: 8rpx 20rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 20rpx;
+  margin-right: 24rpx;
+  float: left;
+  /*width: 90rpx;*/
+  text-align: center;
+  border: 1px solid;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.spec_prc {
+  position: absolute;
+  bottom: 0rem;
+  width: 100%;
+  height: 50px;
+  background-color: #f0eff5;
+}
+
+.spec_prc .price {
+  display: block;
+  color: #f13b25;
+  top: 14px;
+  left: 5px;
+  font-size: 16pt;
+  position: absolute;
+}
+.price_name{
+  font-size: 12px;
+  margin-left: 10rpx;
+  color: #000000;
+}
+
+.mt_spec .add-icon {
+  width: 111px;
+  height: 55px;
+  position: absolute;
+  right: 0;
+  top: 0rem;
+  z-index: 100001;
+  text-align: right;
+  margin-right: 0.4rem;
+}
+
+.mt_spec .add-icon .num {
+  height: 60rpx;
+  width: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.mt_spec .add-icon .jia {
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/shop_jia.png) no-repeat;
+  background-size: 100%;
+}
+
+.mt_spec .add-icon .jian {
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/shop_jian.png) no-repeat;
+  background-size: 100%;
+}
+
+.mt_spec .add-icon view {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  margin-top: 19rpx;
+  float: right;
+}
+
+.shop_style {
+  font-size: 14px;
+  width: 128rpx;
+  display: block;
+  float: left;
+}
+
+/*购物车弹窗*/
+
+.masking {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  height: 100%;
+  background-color: rgba(36, 35, 35, 0.32);
+}
+
+.shop_gwc {
+  width:100%;
+position:absolute;
+max-height:52%;
+bottom:109rpx;
+background-color:#fff;
+padding-bottom:55rpx;
+
+
+}
+
+.shop_gwc .shop_gwc-title {
+  height: 2rem;
+  line-height: 2rem;
+  background-color: #ccc;
+  overflow: hidden;
+}
+
+.shop_gwc .shop_gwc-title text {
+  display: block;
+  padding: 0 0.4rem;
+}
+
+.shop_gwc .shop_gwc-title .gwc-t {
+  float: left;
+  font-size: 14px;
+}
+
+.shop_gwc .shop_gwc-title .gwc-q {
+  float: right;
+  text-align: right;
+  width: 100px;
+  background: url("https://www.weiwoju.com/Public/wap20/delivery/image/clear.png") left no-repeat;
+  background-size: 19%;
+  font-size: 14px;
+}
+
+#gwc_text {
+  overflow: auto;
+  /*height: 235px;*/
+  max-height: 240px;
+  padding-bottom: 10px;
+}
+
+.gwc_shopname {
+  padding-left: 20rpx;
+  font-size: 14px;
+  display: block;
+  float: left;
+  width: 300rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prc {
+  float: right;
+  font-size: 12px;
+  color: #f63;
+  margin-right: 210rpx;
+}
+
+.shop_gwc .gwc-list {
+  border-bottom: 1px solid #ccc;
+  line-height:90rpx;
+  height:90rpx;
+  position: relative;
+}
+
+.shop_gwc .add-icon {
+  width: 96px;
+  height: 32px;
+  position: absolute;
+  right: -10rpx;
+  top: 0rem;
+  z-index: 100001;
+  text-align: right;
+  margin-right: 7.7px;
+}
+
+.shop_gwc .add-icon view {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  margin-top: 19rpx;
+  float: right;
+}
+
+.shop_gwc .add-icon .jian {
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/shop_jian.png) no-repeat;
+  background-size: 100%;
+}
+
+.shop_gwc .add-icon .jia {
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/shop_jia.png) no-repeat;
+  background-size: 100%;
+}
+
+.shop_gwc .add-icon .num {
+  height: 60rpx;
+  width: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.package {
+  font-size: 14px;
+  padding-left:16rpx;
+}
+
+.qjs {
+  background-color: #f63;
+  color: #fff;
+}
+
+ys {
+  color: #f44336;
+}
+
+.spec_num {
+  border: 1px solid;
+  position: absolute;
+  bottom: 15.4px;
+  right: -0.2rem;
+  display: block;
+  width: 15.4px;
+  height: 15.4px;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+  background-color: #f63;
+  line-height: 15.4px;
+}
+
+/*详情页面*/
+
+.shop-show {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 12000;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  /*display: none;*/
+}
+
+.wrapper2 {
+  width: 100%;
+  z-index: 100;
+  height: 800rpx;
+  box-sizing: border-box;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+}
+
+.shop-list {
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  -webkit-box-pack: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.shop-show .shop-list image {
+  width: 580rpx;
+  height: 580rpx;
+  z-index: 9;
+  margin-top: 100rpx;
+  margin-left: 80rpx;
+}
+
+.shop-show  .title-price {
+  display: block;
+  width: 76%;
+  height: 100rpx;
+  background-color: rgba(61, 62, 64, 0.63);
+  z-index: 9;
+  line-height: 100rpx;
+  position: absolute;
+  top: 579rpx;
+  left: 79rpx;
+  padding: 0 0.2rem;
+  overflow: hidden;
+  clear: both;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.title-price .title {
+    float: left;
+    color: #fff;
+    width: 9rem;
+    text-align: left;
+    font-weight: 900;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.title-price .price {
+    float: right;
+}
+.swiper-foter {
+  width: 580rpx;
+  height: 104rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  position: absolute;
+  top: 680rpx;
+  left: 80rpx;
+}
+
+.sales {
+  position: absolute;
+  bottom: 0.6rem;
+  color: #ff6638;
+}
+
+.add_gwc {
+  width: 174rpx;
+  height: 75rpx;
+  padding: 0 12rpx;
+  position: absolute;
+  right: 0;
+  z-index: 99999;
+  color: white;
+  background-color: #f63;
+  top: 16rpx;
+  font-size: 12pt;
+  line-height: 75rpx;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 17rpx;
+}
+
+.swiper-foter .add-icon {
+  width: 178rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 0;
+  z-index: 99999;
+  top: 18rpx;
+  text-align: right;
+  margin-right: 0.4rem;
+}
+
+.swiper-foter .add-icon view {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  margin-top: 10rpx;
+}
+
+.swiper-foter .add-icon .jian {
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/shop_jian.png) no-repeat;
+  background-size: 100%;
+}
+
+.swiper-foter .add-icon .jia {
+  background: url(https://www.weiwoju.com/Public/wap/dinner2/image/shop_jia.png) no-repeat;
+  background-size: 100%;
+}
+
+.swiper-foter .add-icon .num {
+  width: 50rpx;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  line-height: 64rpx;
+  vertical-align: top;
+  /*margin-top: 0.4rem;*/
+  color: #000;
+  left: 70rpx;
+}
+
+.swiper-foter .spec_bx .spec {
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #ff9832;
+  border-radius: 10px;
+}
+
+.swiper-foter .spec_bx {
+  width: 150rpx;
+  height: 21rpx;
+  position: absolute;
+  font-size: 12px;
+  right: 0;
+  top: 34rpx;
+  text-align: right;
+  margin-right: 20rpx;
+}
+
+.clear {
+  position: absolute;
+  top: 860rpx;
+  left: 325rpx;
+}
+.prompt{
+display:block;
+text-align:center;
+margin-top:400rpx;
+font-size:16px;
+}
+.achieve{
+margin-top:80rpx;
+width:350rpx;
+font-size:14px;
+background-color:#ff6633;
+color:#fff;
+border-radius:2px;
+
+
+}
